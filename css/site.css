@@ -735,6 +735,19 @@ img {
 .desktop-only {
   display: none !important;
 }
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+.site-title {
+  margin: 0;
+}
+.site-title a {
+  pointer-events: auto;
+}
 .container {
   width: 96%;
 }
@@ -996,6 +1009,9 @@ h3,
 .font-size-h3 {
   font-size: 16px;
 }
+#header {
+  padding: 14px 14px 0;
+}
 @media screen and (min-width: 720px) {
   .margin-top-micro {
     margin-top: 7px;
@@ -1245,6 +1261,9 @@ h3,
   }
   .mobile-only {
     display: none !important;
+  }
+  #header {
+    padding: 21px 21px 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1496,6 +1515,9 @@ h3,
   }
   .desktop-only {
     display: initial !important;
+  }
+  #header {
+    padding: 24px 24px 0;
   }
 }
 @media screen and (min-width: 1280px) {
