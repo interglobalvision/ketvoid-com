@@ -1038,6 +1038,12 @@ body.single-collection {
 .single-collection-title h1 {
   margin: 0;
 }
+.single-collection-row {
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 .single-collection-item {
   -ms-flex: 0 1 auto;
   -webkit-box-flex: 0;
@@ -1304,20 +1310,14 @@ body.single-collection {
     top: 0;
     left: 0;
     height: 100%;
-    -webkit-box-align: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-        -ms-grid-row-align: center;
-        align-items: center;
+    -ms-justify-content: initial;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
   }
   .single-collection-item {
-    -ms-flex: 0 1 auto;
-    -webkit-box-flex: 0;
-            flex: 0 1 auto;
-    max-height: 100%;
-    width: auto;
     padding: 0 30vw 0 10vw;
   }
 }
