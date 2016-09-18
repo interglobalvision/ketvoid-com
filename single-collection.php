@@ -19,7 +19,7 @@ if( have_posts() ) {
     ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-      <div class="grid-row single-collection-row">
+      <div class="grid-row single-collection-row justify-center align-items-center">
 
       <?php 
         if (!empty($images)) {
@@ -28,7 +28,7 @@ if( have_posts() ) {
           }
         }
       ?>
-
+      
       </div>
       <div class="single-collection-title font-uppercase"><h1><?php the_title(); ?></h1></div>
     </article>
