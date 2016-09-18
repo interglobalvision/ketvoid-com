@@ -30,7 +30,7 @@ if( have_posts() ) {
       ?>
 
       </div>
-      <div class="single-collection-title"><h1><?php the_title(); ?></h1></div>
+      <div class="single-collection-title font-uppercase"><h1><?php the_title(); ?></h1></div>
     </article>
 
 <?php
