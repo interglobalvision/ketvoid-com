@@ -60,6 +60,11 @@ function composer_autoload() {
 }
 /* add_action( 'init', 'composer_autoload', 9999 ); */
 
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
 // Add libs
 
 get_template_part( 'lib/custom-gallery' );
