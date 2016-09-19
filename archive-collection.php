@@ -6,15 +6,22 @@ get_header();
   <section id="posts">
     <div class="container">
       <div class="grid-row">
-        <div class="grid-item item-s-12 item-m-8 offset-m-2 item-l-6 offset-l-3">
+        <div class="grid-item item-s-12 item-m-8 offset-m-2 item-l-6 offset-l-3 margin-top-large">
 
 <?php
 if( have_posts() ) {
   while( have_posts() ) {
     the_post();
 ?>
-          <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-            <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+          <article <?php post_class('archive-collection-item'); ?> id="post-<?php the_ID(); ?>">
+            <a href="<?php the_permalink() ?>" class="archive-collection-link">
+              <h2>
+                <?php the_title(); ?>
+              </h2>
+            </a>
+            <div class="archive-collection-image-holder grid-row">
+              <?php the_post_thumbnail('item-l-3-4x3'); ?>
+            </div>
           </article>
 <?php
   }
