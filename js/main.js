@@ -11,7 +11,9 @@ Site = {
     });
 
     $(document).ready(function () {
-
+      if ($('body').hasClass('post-type-archive-collection')) {
+        _this.Collection.Archive.init();
+      }
     });
 
   },
@@ -30,5 +32,35 @@ Site = {
     });
   },
 };
+
+Site.Collection = {
+
+  Archive: {
+    randPos: 0,
+    randFlip: 0,
+    init: function() {
+      _this = this;
+
+      if ($('.archive-collection-item').length) {
+        _this.bindItemHover();  
+      }
+    },
+
+    bindItemHover: function() {
+      _this = this;
+
+      $('.archive-collection-link').hover(
+        function() {
+          _this.randPos = Math.round(Math.random() * 3);
+          _this.randFlip = Math.round(Math.random() * 3);
+ 
+          $(this).parent().siblings('.archive-collection-image-holder').addClass('visible pos-' + _this.randPos + ' flip-' + _this.randFlip);
+        }, 
+        function() {
+          $(this).parent().siblings('.archive-collection-image-holder').removeClass('visible pos-' + _this.randPos + ' flip-' + _this.randFlip);
+        });
+    }
+  },
+}
 
 Site.init();
