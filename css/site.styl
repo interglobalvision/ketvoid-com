@@ -61,6 +61,8 @@ img
   height: 100%
   top: 0
   left: 0
+  &.visible
+    opacity: 1
   &.pos-0
     justify-content: center
     align-items: flex-start
@@ -73,11 +75,16 @@ img
   &.pos-3
     justify-content: flex-start
     align-items: center
-
-.archive-collection-item 
-  &:hover 
-    .archive-collection-image-holder
-      opacity: 1
+  &.flip-1
+    img 
+      transform: scaleY(-1)
+  &.flip-2
+    img 
+      transform: scaleX(-1)
+  &.flip-3
+    img 
+      transform: rotate(180deg)
+    
 
 // ******************************************************
 

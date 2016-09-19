@@ -747,6 +747,12 @@ img {
   top: 0;
   left: 0;
 }
+.archive-collection-image-holder.visible {
+  -ms-filter: none;
+  -webkit-filter: none;
+          filter: none;
+  opacity: 1;
+}
 .archive-collection-image-holder.pos-0 {
   -ms-justify-content: center;
   -webkit-box-pack: center;
@@ -791,11 +797,17 @@ img {
       -ms-grid-row-align: center;
       align-items: center;
 }
-.archive-collection-item:hover .archive-collection-image-holder {
-  -ms-filter: none;
-  -webkit-filter: none;
-          filter: none;
-  opacity: 1;
+.archive-collection-image-holder.flip-1 img {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+.archive-collection-image-holder.flip-2 img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.archive-collection-image-holder.flip-3 img {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .container {
   width: 96%;
