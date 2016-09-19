@@ -1070,6 +1070,9 @@ h3,
 .font-size-h3 {
   font-size: 16px;
 }
+.archive-collection-item {
+  text-align: center;
+}
 @media screen and (min-width: 720px) {
   .margin-top-micro {
     margin-top: 7px;
@@ -1319,6 +1322,9 @@ h3,
   }
   .mobile-only {
     display: none !important;
+  }
+  .archive-collection-item {
+    text-align: left;
   }
 }
 @media screen and (min-width: 1024px) {
