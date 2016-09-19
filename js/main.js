@@ -41,9 +41,7 @@ Site.Collection = {
     init: function() {
       _this = this;
 
-      if ($('.archive-collection-item').length) {
-        _this.bindItemHover();  
-      }
+      _this.bindItemHover();  
     },
 
     bindItemHover: function() {
