@@ -39,6 +39,35 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+  // HOME
+
+  $home_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'home_meta',
+    'title'         => __( 'Home Options', 'cmb2' ),
+    'object_types'  => array( 'page', ), // Post type
+    'show_on'      => array( 'key' => 'id', 'value' => array( get_id_by_slug('home') ) ),
+  ) );
+
+  $home_meta->add_field( array(
+    'name'    => __( 'Home Images', 'cmb2' ),
+    'desc' => __( 'Add 4 images for Home page. Images layout clockwise, with the first image at top.', 'cmb2' ),
+    'button' => 'Edit images', // Optionally set button label
+    'clear-button' => 'Clear images', // Optionally set clear button label
+    'id'      => $prefix . 'home_imgs',
+    'type' => 'pw_gallery',
+    'preview_size' => array( 200, 200 ), // Set the size of the thumbnails
+    'sanitization_cb' => 'pw_gallery_field_sanitise', // REQUIRED
+  ) );
+
+  $home_meta->add_field( array(
+    'name' => __( 'Vimeo video URL', 'cmb2' ),
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'home_video',
+    'type' => 'text',
+  ) );
+
+  // COLLECTION
+
   $collection_meta = new_cmb2_box( array(
     'id'            => $prefix . 'collection_meta',
     'title'         => __( 'Collection Options', 'cmb2' ),
