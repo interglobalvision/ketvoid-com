@@ -111,7 +111,9 @@ Site.Home = {
       'width': videoLeft, 
     });
 
-    _this.initVideoPlayer();
+    if (video['url']) {
+      _this.initVideoPlayer();
+    }
   },
 
   initVideoPlayer: function() {
