@@ -26,6 +26,13 @@ Site = {
     if ($('body').hasClass('single-collection')) {
       _this.Layout.convertScroll();
     }
+
+    if ($('body').hasClass('home')) {
+      _this.Layout.windowWidth = $(window).width();
+      _this.Layout.windowHeight = $(window).height();
+
+      _this.Layout.sizeHomeElements();
+    }
   },
 
   fixWidows: function() {
@@ -65,11 +72,18 @@ Site.Collection = {
 }
 
 Site.Layout = {
+  windowWidth: $(window).width(),
+  windowHeight: $(window).height(),
   init: function() {
     var _this = this;
 
     if ($('body').hasClass('single-collection')) {
       _this.convertScroll();
+    }
+
+    if ($('body').hasClass('home')) {
+      _this.sizeHomeElements();
+      _this.bindHomeBgImages();
     }
   },
 
@@ -79,6 +93,56 @@ Site.Layout = {
     } else {
       scrollConverter.deactivate();
     }
+  },
+
+  sizeHomeElements: function() {
+    var _this = this,
+      videoWidth = $('.home-video').width(),
+      videoHeight = $('.home-video').height(),
+      videoTop = (_this.windowHeight - videoHeight) / 2,
+      videoLeft = (_this.windowWidth - videoWidth) / 2;
+
+    $('.home-video').css({
+      'top': videoTop,
+      'left': videoLeft,
+    })
+
+    $('.home-image-top, .home-image-bottom').css({
+      'height': videoTop,
+      'width': _this.windowWidth - videoLeft,
+    });
+
+    $('.home-image-left, .home-image-right').css({
+      'height': _this.windowHeight - videoTop,
+      'width': videoLeft, 
+    });
+  },
+
+  bindHomeBgImages: function() {
+    var _this = this;
+
+    $(document).bind('mousemove',function(e){ 
+        var mouseX = ( e.pageX / _this.windowWidth ) * 100,
+          mouseY = ( e.pageY / _this.windowHeight ) * 100;
+
+        console.log("mouseX: " + mouseX + ", mouseY: " + mouseY); 
+
+        $('.home-image-bg-left').css({
+          'transform': 'translateX(' + ( - mouseY / 2) + '%)',
+        });
+
+        $('.home-image-bg-right').css({
+          'transform': 'translateX(' + ( mouseY / 2) + '%)',
+        });
+
+        $('.home-image-bg-top').css({
+          'transform': 'translateY(' + ( - mouseX / 2) + '%)',
+        });
+
+        $('.home-image-bg-bottom').css({
+          'transform': 'translateY(' + ( mouseX / 2) + '%)',
+        });
+    });
   }
 }
 
