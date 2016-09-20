@@ -5,7 +5,7 @@ function add_menu_icons_styles(){
 ?>
  
 <style>
-#menu-posts-project .dashicons-admin-post:before {
+#menu-posts-collection .dashicons-admin-post:before {
     content: '\f319';
 }
 </style>
@@ -16,23 +16,23 @@ add_action( 'admin_head', 'add_menu_icons_styles' );
 
 
 //Register Custom Post Types
-add_action( 'init', 'register_cpt_project' );
+add_action( 'init', 'register_cpt_collection' );
 
-function register_cpt_project() {
+function register_cpt_collection() {
 
     $labels = array( 
-        'name' => _x( 'Projects', 'project' ),
-        'singular_name' => _x( 'Project', 'project' ),
-        'add_new' => _x( 'Add New', 'project' ),
-        'add_new_item' => _x( 'Add New Project', 'project' ),
-        'edit_item' => _x( 'Edit Project', 'project' ),
-        'new_item' => _x( 'New Project', 'project' ),
-        'view_item' => _x( 'View Project', 'project' ),
-        'search_items' => _x( 'Search Projects', 'project' ),
-        'not_found' => _x( 'No projects found', 'project' ),
-        'not_found_in_trash' => _x( 'No projects found in Trash', 'project' ),
-        'parent_item_colon' => _x( 'Parent Project:', 'project' ),
-        'menu_name' => _x( 'Projects', 'project' ),
+        'name' => _x( 'Collections', 'collection' ),
+        'singular_name' => _x( 'Collection', 'collection' ),
+        'add_new' => _x( 'Add New', 'collection' ),
+        'add_new_item' => _x( 'Add New Collection', 'collection' ),
+        'edit_item' => _x( 'Edit Collection', 'collection' ),
+        'new_item' => _x( 'New Collection', 'collection' ),
+        'view_item' => _x( 'View Collection', 'collection' ),
+        'search_items' => _x( 'Search Collections', 'collection' ),
+        'not_found' => _x( 'No Collections found', 'collection' ),
+        'not_found_in_trash' => _x( 'No Collections found in Trash', 'collection' ),
+        'parent_item_colon' => _x( 'Parent Collection:', 'collection' ),
+        'menu_name' => _x( 'Collections', 'collection' ),
     );
 
     $args = array( 
@@ -56,5 +56,5 @@ function register_cpt_project() {
         'capability_type' => 'post'
     );
 
-    register_post_type( 'project', $args );
+    register_post_type( 'collection', $args );
 }
