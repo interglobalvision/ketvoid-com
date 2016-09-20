@@ -736,6 +736,20 @@ img {
 .desktop-only {
   display: none !important;
 }
+#header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+.site-title {
+  margin: 0;
+}
+.site-title a {
+  pointer-events: auto;
+}
 .container {
   width: 96%;
 }
@@ -996,6 +1010,9 @@ h2,
 h3,
 .font-size-h3 {
   font-size: 16px;
+}
+#header {
+  padding: 14px 14px 0;
 }
 body.single-collection {
   width: 100%;
@@ -1302,6 +1319,9 @@ body.single-collection {
   .mobile-only {
     display: none !important;
   }
+  #header {
+    padding: 21px 21px 0;
+  }
   body.single-collection {
     overflow-x: scroll;
   }
@@ -1570,6 +1590,9 @@ body.single-collection {
   }
   .desktop-only {
     display: initial !important;
+  }
+  #header {
+    padding: 24px 24px 0;
   }
 }
 @media screen and (min-width: 1280px) {
