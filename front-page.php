@@ -2,6 +2,7 @@
 get_header();
 
 $images = get_post_meta($post->ID, '_igv_home_imgs', true);
+$video = get_post_meta($post->ID, '_igv_home_video', true);
 ?>
 
 <main id="main-content">
@@ -24,10 +25,16 @@ if (!empty($images)) {
   <div class="home-image home-image-left">
     <div class="home-image-bg home-image-bg-left" style="background-image: url('<?php echo wp_get_attachment_image_src($images[3], 'full')[0]; ?>')"></div>
   </div>
-
-  <div class="home-video"></div>
-<?php
+<?php 
   }
+}
+
+if (!empty($video)) {
+?>
+  <div class="home-video">
+    <video id="home-video-player" class="video-js"></video>
+  </div>
+<?php
 }
 ?>
 </main>
