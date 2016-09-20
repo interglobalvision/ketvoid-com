@@ -6,6 +6,17 @@ function scripts_and_styles_method() {
 
   $templateuri = get_template_directory_uri() . '/js/';
 
+  if (is_front_page()) {
+    $home_video = get_post_meta(get_id_by_slug('home'), '_igv_home_video', true);
+
+    if (!empty($home_video)) {
+      wp_enqueue_style( 'videojs', '//vjs.zencdn.net/5.8/video-js.min.css' );
+      wp_enqueue_script('videojs','//vjs.zencdn.net/5.8/video.min.js','','',true);
+      wp_enqueue_script('videojsvimeo',$templateuri . 'vjsvimeo.js','','',true);
+      wp_localize_script( 'videojs', 'video', array('url' => $home_video) );
+    }
+  }
+  
   // library.js is to bundle plugins. my.js is your scripts. enqueue more files as needed
   $jslib = $templateuri . 'library.js';
   wp_enqueue_script( 'jslib', $jslib,'','',true);
