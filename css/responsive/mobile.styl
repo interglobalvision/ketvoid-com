@@ -1,7 +1,55 @@
+// HEADER 
+
+#header 
+  padding: $margin-small $margin-small 0
+  
+// ******************************************************
+
+// SINGLE COLLECTION
+
+body.single-collection 
+  width: 100%
+  height: 100%
+  overflow-x: hidden
+  
+.single-collection-background
+  position: fixed 
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-size: cover
+  background-position: center
+  z-index: -100
+  
+.single-collection-title
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  pointer-events: none
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  h1 
+    margin: 0
+    
+.single-collection-row 
+  justify-content: center
+    
+.single-collection-item
+  flex: 0 1 auto 
+  max-height: 100%
+  width: auto
+  padding: 20vh 0 10vh
+
 // ******************************************************
 
 // ARCHIVE COLLECTION
 
 .archive-collection-item
   text-align: center
-  
+
+// ******************************************************

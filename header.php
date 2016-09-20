@@ -28,5 +28,5 @@
 <section id="main-container">
 
   <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <h1 class="site-title grid-row justify-between"><a href="<?php echo home_url(); ?>">KET</a><a href="<?php echo home_url(); ?>">VOID</a></h1>
   </header>

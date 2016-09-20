@@ -14,6 +14,8 @@ Site = {
       if ($('body').hasClass('post-type-archive-collection')) {
         _this.Collection.Archive.init();
       }
+
+      _this.Layout.init();
     });
 
   },
@@ -21,6 +23,9 @@ Site = {
   onResize: function() {
     var _this = this;
 
+    if ($('body').hasClass('single-collection')) {
+      _this.Layout.convertScroll();
+    }
   },
 
   fixWidows: function() {
@@ -57,6 +62,24 @@ Site.Collection = {
       });
     }
   },
+}
+
+Site.Layout = {
+  init: function() {
+    var _this = this;
+
+    if ($('body').hasClass('single-collection')) {
+      _this.convertScroll();
+    }
+  },
+
+  convertScroll: function() {
+    if ($('body').css('overflow-x') == 'scroll') {
+      scrollConverter.activate();
+    } else {
+      scrollConverter.deactivate();
+    }
+  }
 }
 
 Site.init();

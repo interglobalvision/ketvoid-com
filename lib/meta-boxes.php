@@ -39,5 +39,28 @@ function igv_cmb_metaboxes() {
    * Reference: https://github.com/WebDevStudios/CMB2/blob/master/example-functions.php
 	 */
 
+  $collection_meta = new_cmb2_box( array(
+    'id'            => $prefix . 'collection_meta',
+    'title'         => __( 'Collection Options', 'cmb2' ),
+    'object_types'  => array( 'collection', ), // Post type
+  ) );
+
+  $collection_meta->add_field( array(
+    'name' => __( 'Background image', 'cmb2' ),
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'collection_bg',
+    'type' => 'file',
+  ) );
+
+  $collection_meta->add_field( array(
+    'name'    => __( 'Images', 'cmb2' ),
+    'button' => 'Edit images', // Optionally set button label
+    'clear-button' => 'Clear images', // Optionally set clear button label
+    'id'      => $prefix . 'collection_imgs',
+    'type' => 'pw_gallery',
+    'preview_size' => array( 200, 200 ), // Set the size of the thumbnails
+    'sanitization_cb' => 'pw_gallery_field_sanitise', // REQUIRED
+  ) );
+
 }
 ?>
