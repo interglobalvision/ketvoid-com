@@ -750,6 +750,56 @@ img {
 .site-title a {
   pointer-events: auto;
 }
+.home-image {
+  position: fixed;
+  overflow: hidden;
+}
+.home-image-top {
+  top: 0;
+  left: 0;
+}
+.home-image-right {
+  top: 0;
+  right: 0;
+}
+.home-image-bottom {
+  bottom: 0;
+  right: 0;
+}
+.home-image-left {
+  bottom: 0;
+  left: 0;
+}
+.home-image-bg {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+.home-image-bg-top,
+.home-image-bg-bottom {
+  height: 200%;
+  width: 100%;
+}
+.home-image-bg-right,
+.home-image-bg-left {
+  width: 200%;
+  height: 100%;
+}
+.home-image-bg-bottom {
+  top: auto;
+  bottom: 0;
+}
+.home-image-bg-right {
+  left: auto;
+  right: 0;
+}
+.home-video {
+  position: fixed;
+  background: #008000;
+}
 .archive-collection-image-holder {
   position: fixed;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -1088,6 +1138,10 @@ h3,
 #header {
   padding: 14px 14px 0;
 }
+.home-video {
+  width: 60vw;
+  height: 33.75vw;
+}
 body.single-collection {
   width: 100%;
   height: 100%;
@@ -1399,6 +1453,10 @@ body.single-collection {
   #header {
     padding: 21px 21px 0;
   }
+  .home-video {
+    width: 50vw;
+    height: 28.125vw;
+  }
   body.single-collection {
     overflow-x: scroll;
   }
@@ -1673,6 +1731,10 @@ body.single-collection {
   }
   #header {
     padding: 24px 24px 0;
+  }
+  .home-video {
+    width: 40vw;
+    height: 22.5vw;
   }
 }
 @media screen and (min-width: 1280px) {
