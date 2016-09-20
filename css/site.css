@@ -750,6 +750,17 @@ img {
 .site-title a {
   pointer-events: auto;
 }
+#footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+.menu-item {
+  pointer-events: auto;
+}
 .archive-collection-image-holder {
   position: fixed;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -1088,6 +1099,9 @@ h3,
 #header {
   padding: 14px 14px 0;
 }
+#footer {
+  padding: 0 14px 14px;
+}
 body.single-collection {
   width: 100%;
   height: 100%;
@@ -1399,6 +1413,9 @@ body.single-collection {
   #header {
     padding: 21px 21px 0;
   }
+  #footer {
+    padding: 0 21px 21px;
+  }
   body.single-collection {
     overflow-x: scroll;
   }
@@ -1673,6 +1690,9 @@ body.single-collection {
   }
   #header {
     padding: 24px 24px 0;
+  }
+  #footer {
+    padding: 0 24px 24px;
   }
 }
 @media screen and (min-width: 1280px) {
