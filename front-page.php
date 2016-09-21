@@ -35,7 +35,7 @@ if (!empty($images)) {
     <?php 
       if (!empty($video_id)) {
     ?>
-    <iframe id="home-video-player" src="https://player.vimeo.com/video/<?php echo $video_id; ?>?autoplay=1&loop=1&automute=0" frameborder="0"></iframe>
+    <iframe id="home-video-player" src="https://player.vimeo.com/video/<?php echo $video_id; ?>?autoplay=1&loop=1" frameborder="0"></iframe>
     <?php 
       }
     ?>
