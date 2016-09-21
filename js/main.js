@@ -88,7 +88,7 @@ Site.Home = {
   sizeHomeElements: function() {
     var _this = this,
       videoWidth = $('.home-video').width(),
-      videoHeight = ( videoWidth / video['width'] ) * video['height'];
+      videoHeight = ( videoWidth / videoAspect['width'] ) * videoAspect['height'];
 
     var videoTop = (Site.Layout.windowHeight - videoHeight) / 2,
       videoLeft = (Site.Layout.windowWidth - videoWidth) / 2;
@@ -121,7 +121,28 @@ Site.Home = {
   },
 
   bindHomeBgImages: function() {
-    var _this = this;
+    if (window.DeviceOrientationEvent) {
+       window.addEventListener('deviceorientation', function(event) {
+        var mouseX = ( ( ( event.beta / 180 ) * 100 ) + 100 ) / 2,
+          mouseY = ( ( ( event.gamma / 90 ) * 100 ) + 100 ) / 2;
+
+        $('.home-image-bg-left').css({
+          'transform': 'translateX(' + ( - mouseY / 2) + '%)',
+        });
+
+        $('.home-image-bg-right').css({
+          'transform': 'translateX(' + ( mouseY / 2) + '%)',
+        });
+
+        $('.home-image-bg-top').css({
+          'transform': 'translateY(' + ( - mouseX / 2) + '%)',
+        });
+
+        $('.home-image-bg-bottom').css({
+          'transform': 'translateY(' + ( mouseX / 2) + '%)',
+        });
+      });
+    }
 
     $(document).bind('mousemove', function(e){ 
         var mouseX = ( e.pageX / Site.Layout.windowWidth ) * 100,
