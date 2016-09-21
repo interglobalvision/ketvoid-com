@@ -63,6 +63,7 @@ function igv_cmb_metaboxes() {
     'name' => __( 'Vimeo video ID', 'cmb2' ),
     'desc' => __( 'string of numbers from Vimeo URL: https://vimeo.com/#########', 'cmb2' ),
     'id'   => $prefix . 'home_video_id',
+    'default' => '166243562',
     'type' => 'text',
   ) );
 
