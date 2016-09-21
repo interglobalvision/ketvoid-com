@@ -60,9 +60,25 @@ function igv_cmb_metaboxes() {
   ) );
 
   $home_meta->add_field( array(
-    'name' => __( 'Vimeo video URL', 'cmb2' ),
+    'name' => __( 'Vimeo video ID', 'cmb2' ),
+    'desc' => __( 'string of numbers from Vimeo URL: https://vimeo.com/#########', 'cmb2' ),
+    'id'   => $prefix . 'home_video_id',
+    'type' => 'text',
+  ) );
+
+  $home_meta->add_field( array(
+    'name' => __( 'Video Aspect Ratio Width', 'cmb2' ),
     'desc' => __( '', 'cmb2' ),
-    'id'   => $prefix . 'home_video',
+    'id'   => $prefix . 'home_video_width',
+    'default' => '16',
+    'type' => 'text',
+  ) );
+
+  $home_meta->add_field( array(
+    'name' => __( 'Video Aspect Ratio Height', 'cmb2' ),
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'home_video_height',
+    'default' => '9',
     'type' => 'text',
   ) );
 
