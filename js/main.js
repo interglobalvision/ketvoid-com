@@ -82,63 +82,48 @@ Site.Home = {
 
     _this.sizeHomeElements();
     _this.bindHomeBgImages();
+    Site.Layout.toggleOverlay();
   },
 
   sizeHomeElements: function() {
     var _this = this,
       videoWidth = $('.home-video').width(),
-      videoHeight = $('.home-video').height(),
-      videoTop = (Site.Layout.windowHeight - videoHeight) / 2,
+      videoHeight = ( videoWidth / video['width'] ) * video['height'];
+
+    var videoTop = (Site.Layout.windowHeight - videoHeight) / 2,
       videoLeft = (Site.Layout.windowWidth - videoWidth) / 2;
 
     $('.home-video').css({
+      'height': videoHeight,
       'top': videoTop,
       'left': videoLeft,
     });
 
-    $('.video-js').css({
-      'width': videoWidth,
-      'height': videoHeight,
-    });
-
-    $('.home-image-top, .home-image-bottom').css({
-      'height': videoTop,
-      'width': Site.Layout.windowWidth - videoLeft,
-    });
-
-    $('.home-image-left, .home-image-right').css({
-      'height': Site.Layout.windowHeight - videoTop,
-      'width': videoLeft, 
-    });
-
-    if (video['url']) {
-      _this.initVideoPlayer();
+    if ($('#home-video-player').length) {
+      $('#home-video-player').css({
+        'width': videoWidth,
+        'height': videoHeight + 300,
+        'top': '-150px'
+      });
     }
-  },
 
-  initVideoPlayer: function() {
-    var player = videojs('home-video-player', {
-        "controls": false, 
-        "autoplay": true, 
-        "preload": "auto", 
-        "loop": true, 
-        "techOrder": ["vimeo"], 
-        "sources": [{ 
-          "type": "video/vimeo", 
-          "src": video['url']
-        }],
-        "vimeo": { 
-          "loop": 1 
-        }
-      }, function() {
-      this.play();
-    });
+    if ($('.home-image').length) {
+      $('.home-image-top, .home-image-bottom').css({
+        'height': videoTop,
+        'width': Site.Layout.windowWidth - videoLeft,
+      });
+
+      $('.home-image-left, .home-image-right').css({
+        'height': Site.Layout.windowHeight - videoTop,
+        'width': videoLeft, 
+      });
+    }
   },
 
   bindHomeBgImages: function() {
     var _this = this;
 
-    $(document).bind('mousemove',function(e){ 
+    $(document).bind('mousemove', function(e){ 
         var mouseX = ( e.pageX / Site.Layout.windowWidth ) * 100,
           mouseY = ( e.pageY / Site.Layout.windowHeight ) * 100;
 
@@ -177,6 +162,12 @@ Site.Layout = {
       scrollConverter.activate();
     } else {
       scrollConverter.deactivate();
+    }
+  },
+
+  toggleOverlay: function() {
+    if ($('.site-overlay').length) {
+      $('.site-overlay').toggleClass('hide');
     }
   }
 };

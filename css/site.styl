@@ -30,6 +30,8 @@ normalize()
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
 
+$transition-speed = 2000ms
+
 // ******************************************************
 
 // BASIC
@@ -48,6 +50,20 @@ img
   
 .desktop-only
   display: none !important
+  
+.site-overlay
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: $color-black
+  transition: opacity $transition-speed
+  opacity: 1
+  z-index: 900
+  &.hide 
+    opacity: 0
+    pointer-events: none
   
 // ******************************************************
 
@@ -118,6 +134,10 @@ img
   
 .home-video
   position: fixed
+  pointer-events: none
+  overflow: hidden
+  iframe 
+    position: absolute 
   
 // ******************************************************
 

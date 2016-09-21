@@ -2,8 +2,10 @@
 get_header();
 
 $images = get_post_meta($post->ID, '_igv_home_imgs', true);
-$video = get_post_meta($post->ID, '_igv_home_video', true);
+$video_id = get_post_meta($post->ID, '_igv_home_video_id', true);
 ?>
+
+<div class="site-overlay"></div>
 
 <main id="main-content">
 <?php
@@ -28,15 +30,16 @@ if (!empty($images)) {
 <?php 
   }
 }
-
-if (!empty($video)) {
 ?>
   <div class="home-video">
-    <video id="home-video-player" class="video-js"></video>
+    <?php 
+      if (!empty($video_id)) {
+    ?>
+    <iframe id="home-video-player" src="https://player.vimeo.com/video/<?php echo $video_id; ?>?autoplay=1&loop=1&automute=0" frameborder="0"></iframe>
+    <?php 
+      }
+    ?>
   </div>
-<?php
-}
-?>
 </main>
 
 <?php
