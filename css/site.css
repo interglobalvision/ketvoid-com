@@ -819,7 +819,7 @@ img {
 }
 .home-video {
   position: fixed;
-  pointer-events: none;
+  cursor: pointer;
   overflow: hidden;
 }
 .home-video iframe {
@@ -1757,6 +1757,9 @@ body.single-collection {
   }
   .home-video {
     width: 40vw;
+  }
+  .home-video {
+    pointer-events: none;
   }
 }
 @media screen and (min-width: 1280px) {
