@@ -5,7 +5,7 @@
 function scripts_and_styles_method() {
 
   $templateuri = get_template_directory_uri() . '/js/';
-
+  
   // library.js is to bundle plugins. my.js is your scripts. enqueue more files as needed
   $jslib = $templateuri . 'library.js';
   wp_enqueue_script( 'jslib', $jslib,'','',true);
@@ -21,6 +21,17 @@ function scripts_and_styles_method() {
   );
 
   wp_localize_script( 'myscripts', 'WP', $jsVars );
+
+  if (is_front_page()) {
+    $video_width_meta = get_post_meta(get_id_by_slug('home'), '_igv_home_video_width', true);
+    $video_height_meta = get_post_meta(get_id_by_slug('home'), '_igv_home_video_height', true);
+
+    $video_width = !empty($video_width_meta) ? $video_width_meta : 16; // assume 16 if empty
+    $video_height = !empty($video_height_meta) ? $video_height_meta : 9; // assume 9 if empty
+
+    wp_localize_script( 'myscripts', 'videoAspect', array('width' => $video_width, 'height' => $video_height) );
+  }
+
   wp_enqueue_script( 'myscripts', $myscripts,'','',true);
 
   // enqueue stylesheet here. file does not exist until stylus file is processed

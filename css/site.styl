@@ -30,6 +30,8 @@ normalize()
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
 
+$transition-speed = 2000ms
+
 // ******************************************************
 
 // BASIC
@@ -48,6 +50,20 @@ img
   
 .desktop-only
   display: none !important
+  
+.site-overlay
+  position: fixed
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: $color-black
+  transition: opacity $transition-speed
+  opacity: 1
+  z-index: 900
+  &.hide 
+    opacity: 0
+    pointer-events: none
   
 // ******************************************************
 
@@ -80,6 +96,61 @@ img
   
 .menu-item
   pointer-events: auto
+
+// HOME 
+
+.home-image 
+  position: fixed 
+  overflow: hidden
+
+.home-image-top
+  top: 0
+  left: 0
+  
+.home-image-right
+  top: 0
+  right: 0
+  
+.home-image-bottom
+  bottom: 0
+  right: 0
+  
+.home-image-left
+  bottom: 0
+  left: 0
+  
+.home-image-bg
+  position: absolute
+  background-repeat: no-repeat
+  background-position: center
+  background-size: cover
+  top: 0
+  left: 0
+    
+.home-image-bg-top,
+.home-image-bg-bottom
+  height: 200%
+  width: 100%
+      
+.home-image-bg-right,
+.home-image-bg-left
+  width: 200%
+  height: 100%
+  
+.home-image-bg-bottom
+  top: auto
+  bottom: 0
+  
+.home-image-bg-right
+  left: auto
+  right: 0
+  
+.home-video
+  position: fixed
+  cursor: pointer
+  overflow: hidden
+  iframe 
+    position: absolute 
     
 // ******************************************************
 
