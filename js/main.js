@@ -121,6 +121,7 @@ Site.Home = {
   },
 
   bindHomeBgImages: function() {
+    /*
     if (window.DeviceOrientationEvent) {
        window.addEventListener('deviceorientation', function(event) {
         var mouseX = ( ( ( event.beta / 180 ) * 100 ) + 100 ) / 2,
@@ -143,6 +144,7 @@ Site.Home = {
         });
       });
     }
+    */
 
     $(document).bind('mousemove', function(e){ 
         var mouseX = ( e.pageX / Site.Layout.windowWidth ) * 100,
