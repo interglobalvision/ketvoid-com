@@ -1,4 +1,8 @@
   <footer id="footer">
+    <nav class="grid-row justify-between font-uppercase font-size-h2">
+      <a class="menu-item" href="<?php echo site_url('/collection'); ?>">Collections</a>
+      <a class="menu-item" href="<?php echo site_url('/shop'); ?>">Shop</a>
+    </nav>
   </footer>
 
 </section>
