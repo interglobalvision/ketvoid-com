@@ -1699,10 +1699,10 @@ h3,
   padding-bottom: 70px;
 }
 #header {
-  padding: 14px;
+  padding: 14px 14px 0;
 }
 #footer {
-  padding: 14px;
+  padding: 14px 14px 0;
 }
 .home-video {
   width: 60vw;
@@ -2020,13 +2020,13 @@ body.single-collection {
     padding-bottom: 80px;
   }
   #header {
-    padding: 21px;
+    padding: 21px 21px 0;
   }
   .home-video {
     width: 50vw;
   }
   #footer {
-    padding: 21px;
+    padding: 21px 21px 0;
   }
   body.single-collection {
     overflow-x: scroll;
@@ -2309,10 +2309,10 @@ body.single-collection {
     padding-bottom: 90px;
   }
   #header {
-    padding: 24px;
+    padding: 24px 24px 0;
   }
   #footer {
-    padding: 24px;
+    padding: 24px 24px 0;
   }
   .home-video {
     width: 40vw;
