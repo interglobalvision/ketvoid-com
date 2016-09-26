@@ -1695,8 +1695,8 @@ h3,
   font-size: 16px;
 }
 .main-content-padding {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 #header {
   padding: 14px 14px 0;
@@ -1764,6 +1764,10 @@ body.single-collection {
 }
 .archive-collection-item {
   text-align: center;
+}
+.single-product-image {
+  width: auto;
+  max-height: calc(100vh - 130px);
 }
 @media screen and (min-width: 720px) {
   .margin-top-micro {
@@ -2048,10 +2052,6 @@ body.single-collection {
   }
   .archive-collection-item {
     text-align: left;
-  }
-  .single-product-image {
-    width: auto;
-    max-height: calc(100vh - 160px);
   }
 }
 @media screen and (min-width: 1024px) {
