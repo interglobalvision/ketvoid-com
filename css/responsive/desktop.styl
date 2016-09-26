@@ -1,25 +1,25 @@
-$header-height = 61px
-$footer-height = 61px
+$header-height = 90px
+$footer-height = 90px
 
 // BASIC
 
 .main-content-padding 
-  padding-top: $header-height + $margin-basic 
-  padding-bottom: $footer-height + $margin-basic
+  padding-top: $header-height
+  padding-bottom: $footer-height
 
 // ******************************************************
 
 // HEADER 
 
 #header 
-  padding: $margin-small $margin-small 0
+  padding: $margin-small
   
 // ******************************************************
 
 // FOOTER 
 
 #footer 
-  padding: 0 $margin-small $margin-small
+  padding: $margin-small
   
 // ******************************************************
 
@@ -27,8 +27,13 @@ $footer-height = 61px
 
 .home-video
   width: 40vw
-    
+  pointer-events: none
+  
 // ******************************************************
 
-.home-video
-  pointer-events: none
+// SINGLE PRODUCT
+
+.single-product-image
+  max-height: calc('100vh - ' + ($header-height + $footer-height))
+
+// ******************************************************
