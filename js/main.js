@@ -20,6 +20,9 @@ Site = {
       if ($('body').hasClass('home')) {
         _this.Home.init();
       }
+      if ($('body').hasClass('single-product')) {
+        _this.Product.Single.init();
+      }
       
     });
 
@@ -167,6 +170,28 @@ Site.Home = {
         });
     });
   }
+};
+
+Site.Product = {
+  Single: {
+    init: function() {
+      var _this = this;
+
+      _this.initSwiper();
+    },
+
+    initSwiper: function() {
+      if ($('.swiper-container').length) {
+        var swiper = new Swiper('.swiper-container', {
+          loop: true,
+          speed: 200,
+          spaceBetween: 36,
+          nextButton: '.slider-next',
+          setWrapperSize: true
+        });
+      }
+    }
+  },
 };
 
 Site.Layout = {

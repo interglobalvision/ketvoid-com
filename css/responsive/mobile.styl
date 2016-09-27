@@ -1,12 +1,12 @@
-$header-height = 51px
-$footer-height = 51px
+$header-height = 65px
+$footer-height = 65px
 
 // BASIC
 
 .main-content-padding 
-  padding-top: $header-height + $margin-basic
-  padding-bottom: $footer-height + $margin-basic
-
+  padding-top: $header-height
+  padding-bottom: $footer-height
+ 
 // ******************************************************
 
 // HEADER 
@@ -19,7 +19,7 @@ $footer-height = 51px
 // FOOTER 
 
 #footer 
-  padding: 0 $margin-small $margin-small
+  padding: $margin-small $margin-small 0
 
 // HOME 
 
@@ -74,5 +74,13 @@ body.single-collection
 
 .archive-collection-item
   text-align: center
+
+// ******************************************************
+
+// SINGLE PRODUCT
+
+.single-product-image
+  width: auto
+  max-height: calc('100vh - ' + ($header-height + $footer-height))
 
 // ******************************************************
