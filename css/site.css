@@ -1704,6 +1704,12 @@ h3,
 #footer {
   padding: 0 14px 14px;
 }
+.footer-cart {
+  margin-left: 7px;
+}
+.footer-cart img {
+  height: 16px;
+}
 .home-video {
   width: 60vw;
 }
@@ -2032,6 +2038,9 @@ body.single-collection {
   #footer {
     padding: 0 21px 21px;
   }
+  .footer-cart {
+    margin-left: 10.5px;
+  }
   body.single-collection {
     overflow-x: scroll;
   }
@@ -2313,6 +2322,9 @@ body.single-collection {
   }
   #footer {
     padding: 0 24px 24px;
+  }
+  .footer-cart {
+    margin-left: 12px;
   }
   .home-video {
     width: 40vw;
