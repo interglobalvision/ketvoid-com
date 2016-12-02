@@ -1247,10 +1247,10 @@ img {
   height: auto;
 }
 .mobile-only {
-  display: initial !important;
+  display: initial;
 }
 .desktop-only {
-  display: none !important;
+  display: none;
 }
 .site-overlay {
   position: fixed;
@@ -1702,7 +1702,7 @@ h3,
   padding: 14px 14px 0;
 }
 #footer {
-  padding: 14px 14px 0;
+  padding: 0 14px 14px;
 }
 .home-video {
   width: 60vw;
@@ -2017,7 +2017,7 @@ body.single-collection {
     max-height: 100%;
   }
   .mobile-only {
-    display: none !important;
+    display: none;
   }
   .main-content-padding {
     padding-top: 80px;
@@ -2030,7 +2030,7 @@ body.single-collection {
     width: 50vw;
   }
   #footer {
-    padding: 21px 21px 0;
+    padding: 0 21px 21px;
   }
   body.single-collection {
     overflow-x: scroll;
@@ -2302,7 +2302,7 @@ body.single-collection {
     padding-bottom: 120px;
   }
   .desktop-only {
-    display: initial !important;
+    display: initial;
   }
   .main-content-padding {
     padding-top: 90px;
@@ -2312,7 +2312,7 @@ body.single-collection {
     padding: 24px 24px 0;
   }
   #footer {
-    padding: 24px 24px 0;
+    padding: 0 24px 24px;
   }
   .home-video {
     width: 40vw;
