@@ -25,7 +25,7 @@ if( have_posts() ) {
           </div>
 
           <div class="grid-item item-s-4 offset-s-1">
-            <h2 class="margin-bottom-small"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+            <h2 class="margin-bottom-small font-size-medium"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 <?php 
     if (!$in_stock) {
       echo $availability['availability'];
