@@ -47,11 +47,11 @@ img
   height: auto
 
 .mobile-only
-  display: initial !important 
-  
+  display: initial
+
 .desktop-only
-  display: none !important
-  
+  display: none
+
 .site-overlay
   position: fixed
   top: 0
@@ -62,64 +62,64 @@ img
   transition: opacity $transition-speed
   opacity: 1
   z-index: 900
-  &.hide 
+  &.hide
     opacity: 0
     pointer-events: none
-  
+
 // ******************************************************
 
-// HEADER 
+// HEADER
 
 #header
-  position: fixed 
+  position: fixed
   width: 100%
   top: 0
   left: 0
   pointer-events: none
   z-index: 100
-  
-.site-title 
+
+.site-title
   margin: 0
-  a 
+  a
     pointer-events: auto
-    
+
 // ******************************************************
 
-// FOOTER 
+// FOOTER
 
-#footer 
-  position: fixed 
+#footer
+  position: fixed
   width: 100%
   bottom: 0
   left: 0
   pointer-events: none
   z-index: 100
-  
+
 .menu-item
   pointer-events: auto
 
-// HOME 
+// HOME
 
-.home-image 
-  position: fixed 
+.home-image
+  position: fixed
   overflow: hidden
 
 .home-image-top
   top: 0
   left: 0
-  
+
 .home-image-right
   top: 0
   right: 0
-  
+
 .home-image-bottom
   bottom: 0
   right: 0
-  
+
 .home-image-left
   bottom: 0
   left: 0
-  
+
 .home-image-bg
   position: absolute
   background-repeat: no-repeat
@@ -127,41 +127,41 @@ img
   background-size: cover
   top: 0
   left: 0
-    
+
 .home-image-bg-top,
 .home-image-bg-bottom
   height: 200%
   width: 100%
-      
+
 .home-image-bg-right,
 .home-image-bg-left
   width: 200%
   height: 100%
-  
+
 .home-image-bg-bottom
   top: auto
   bottom: 0
-  
+
 .home-image-bg-right
   left: auto
   right: 0
-  
+
 .home-video
   position: fixed
   cursor: pointer
   overflow: hidden
-  iframe 
-    position: absolute 
-    
+  iframe
+    position: absolute
+
 // ******************************************************
 
 // ARCHIVE COLLECTION
 
 .archive-collection-image-holder
   position: fixed
-  opacity: 0 
-  pointer-events: none 
-  z-index: -100 
+  opacity: 0
+  pointer-events: none
+  z-index: -100
   width: 100%
   height: 100%
   top: 0
@@ -181,13 +181,13 @@ img
     justify-content: flex-start
     align-items: center
   &.flip-1
-    img 
+    img
       transform: scaleY(-1)
   &.flip-2
-    img 
+    img
       transform: scaleX(-1)
   &.flip-3
-    img 
+    img
       transform: rotate(180deg)
 
 // ******************************************************
@@ -196,12 +196,12 @@ img
 
 .swiper-wrapper
   align-items: center
-  
+
 // ******************************************************
 
 // MEDIA QUERIES
 
-$gutter = 14px 
+$gutter = 14px
 
 $margin-micro = ($gutter / 3)
 $margin-tiny = ($gutter / 2)
@@ -209,7 +209,7 @@ $margin-small = ($gutter)
 $margin-basic = ($gutter * 2)
 $margin-mid = ($gutter * 3.5)
 $margin-large = ($gutter * 5)
-    
+
 $font-size-basic = 14px
 $font-size-large = 28px
 $font-size-medium = 21px
@@ -226,28 +226,28 @@ font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-s
 @media screen and (min-width: 720px)
 
   $gutter = 21px
-  
+
   $margin-micro = ($gutter / 3)
   $margin-tiny = ($gutter / 2)
   $margin-small = ($gutter)
   $margin-basic = ($gutter * 2)
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
-  
+
   $font-size-basic = 14px
   $font-size-large = 32px
   $font-size-medium = 24px
   $font-size-small = 11px
-  
+
   grid(96%, $gutter, m)
-  
+
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
-  
+
   font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-size-small)
-  
+
   .mobile-only
-    display: none !important
-  
+    display: none
+
   @import 'responsive/tablet'
 
 @media screen and (min-width: 1024px)
@@ -260,25 +260,25 @@ font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-s
   $margin-basic = ($gutter * 2)
   $margin-mid = ($gutter * 3.5)
   $margin-large = ($gutter * 5)
-  
+
   $font-size-basic = 16px
   $font-size-large = 36px
   $font-size-medium = 27px
   $font-size-small = 12px
 
   grid(1000px, $gutter, l)
-  
+
   space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
-  
+
   font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-size-small)
-  
+
   .desktop-only
-    display: initial !important
+    display: initial
 
   @import 'responsive/desktop'
-  
+
 @media screen and (min-width: 1280px)
-  
+
   grid(1200px)
 
 @media screen and (min-width: 1366px)

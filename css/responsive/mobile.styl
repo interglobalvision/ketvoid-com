@@ -3,40 +3,45 @@ $footer-height = 65px
 
 // BASIC
 
-.main-content-padding 
+.main-content-padding
   padding-top: $header-height
   padding-bottom: $footer-height
- 
+
 // ******************************************************
 
-// HEADER 
+// HEADER
 
-#header 
+#header
   padding: $margin-tiny $margin-small 0
-  
+
 // ******************************************************
 
-// FOOTER 
+// FOOTER
 
-#footer 
-  padding: 0 $margin-small $margin-tiny 
+#footer
+  padding: 0 $margin-small $margin-tiny
 
-// HOME 
+.footer-cart
+  margin-left: $margin-tiny
+  img
+    height: 16px
+
+// HOME
 
 .home-video
   width: 60vw
-  
+
 // ******************************************************
 
 // SINGLE COLLECTION
 
-body.single-collection 
+body.single-collection
   width: 100%
   height: 100%
   overflow-x: hidden
-  
+
 .single-collection-background
-  position: fixed 
+  position: fixed
   top: 0
   left: 0
   width: 100%
@@ -44,7 +49,7 @@ body.single-collection
   background-size: cover
   background-position: center
   z-index: -100
-  
+
 .single-collection-title
   position: fixed
   width: 100%
@@ -56,14 +61,14 @@ body.single-collection
   flex-direction: column
   justify-content: center
   align-items: center
-  h1 
+  h1
     margin: 0
-    
-.single-collection-row 
+
+.single-collection-row
   justify-content: center
-    
+
 .single-collection-item
-  flex: 0 1 auto 
+  flex: 0 1 auto
   max-height: 100%
   width: auto
   padding: 20vh 0 10vh
