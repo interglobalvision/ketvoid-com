@@ -14,7 +14,7 @@ if( have_posts() ) {
     the_post();
 ?>
           <article <?php post_class('archive-collection-item'); ?> id="post-<?php the_ID(); ?>">
-            <h2><a href="<?php the_permalink() ?>" class="archive-collection-link"><?php the_title(); ?></a></h2>
+            <h2 class="font-size-large"><a href="<?php the_permalink() ?>" class="archive-collection-link"><?php the_title(); ?></a></h2>
             <div class="archive-collection-image-holder grid-row">
               <?php the_post_thumbnail('item-l-3-4x3'); ?>
             </div>
