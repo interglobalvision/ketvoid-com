@@ -1,5 +1,5 @@
-$header-height = 90px
-$footer-height = 90px
+$header-height = 60px
+$footer-height = 48px
 
 // BASIC
 
@@ -7,6 +7,9 @@ $footer-height = 90px
   padding-top: $header-height
   padding-bottom: $footer-height
 
+.min-height-content 
+  min-height: calc('100vh - ' + ($header-height * 2))
+  
 // ******************************************************
 
 // HEADER
