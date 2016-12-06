@@ -27,6 +27,15 @@ if( have_posts() ) {
             echo wp_get_attachment_image( $image, 'full', false, array('class'=>'single-collection-item'));
           }
         }
+
+        if (get_the_content() !== '') {
+      ?>
+        <div class="single-collection-text grid-column
+        justify-center">
+          <?php the_content(); ?>
+        </div>
+      <?php
+        }
       ?>
 
       </div>
