@@ -24,7 +24,7 @@ if( have_posts() ) {
       <?php 
         if (!empty($images)) {
           foreach ($images as $image) {
-            echo wp_get_attachment_image( $image, 'full', false, array('class'=>'single-collection-item'));
+            echo wp_get_attachment_image( $image, 'gallery', false, array('class'=>'single-collection-item'));
           }
         }
 
