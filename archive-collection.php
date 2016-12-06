@@ -2,11 +2,11 @@
 get_header();
 ?>
 
-<main id="main-content" class="main-content-padding">
-  <section id="posts">
-    <div class="container">
-      <div class="grid-row">
-        <div class="grid-item item-s-12 item-m-8 offset-m-2 item-l-6 offset-l-3 margin-top-large">
+<main id="main-content" class="main-content-padding min-height-content">
+  <section id="posts min-height-content">
+    <div class="container min-height-content">
+      <div class="grid-column align-items-center min-height-content">
+        <div class="grid-item item-s-12 item-m-8 offset-m-2 item-l-6 offset-l-3">
 
 <?php
 if( have_posts() ) {
