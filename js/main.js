@@ -36,6 +36,7 @@ Site = {
 
     if ($('body').hasClass('single-collection')) {
       _this.Layout.convertScroll();
+      _this.Layout.setBodyWidth();
     }
 
     if ($('body').hasClass('home')) {
@@ -202,6 +203,11 @@ Site.Layout = {
 
     if ($('body').hasClass('single-collection')) {
       _this.convertScroll();
+      
+      $('img.single-collection-item').one('load',function() {
+        // set body width as each image loads
+        _this.setBodyWidth();
+      });
     }
   },
 
@@ -210,6 +216,21 @@ Site.Layout = {
       scrollConverter.activate();
     } else {
       scrollConverter.deactivate();
+    }
+  },
+
+  setBodyWidth: function() {
+    // explicit body width is necessary for scrollConverter to work on Mozilla
+    if ($('body').css('overflow-x') == 'scroll') {
+      var bodyWidth = 0;
+
+      $('.single-collection-item, .single-collection-text').each(function() {
+        bodyWidth += $(this).outerWidth(true);
+      });
+
+      $('body').css('width', bodyWidth);
+    } else {
+      $('body').css('width', '100%');
     }
   },
 
