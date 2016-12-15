@@ -1396,6 +1396,9 @@ img {
 .home-video iframe {
   position: absolute;
 }
+.single-collection-text {
+  background-color: #fff;
+}
 .archive-collection-image-holder {
   position: fixed;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -1813,6 +1816,14 @@ body.single-collection {
   width: auto;
   padding: 20vh 0 10vh;
 }
+.single-collection-text {
+  width: 100%;
+  padding: 28px 28px 65px;
+  margin-top: 20vh;
+  -ms-flex: 1 1;
+  -webkit-box-flex: 1;
+          flex: 1 1;
+}
 .archive-collection-item {
   text-align: center;
 }
@@ -2119,6 +2130,24 @@ body.single-collection {
   }
   .single-collection-item {
     padding: 0 30vw 0 10vw;
+  }
+  .single-collection-text {
+    padding: 80px 10vw;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-align-items: center;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .single-collection-text p {
+    width: 400px;
   }
   .archive-collection-item {
     text-align: left;
