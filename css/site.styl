@@ -20,18 +20,19 @@ normalize()
 
 // ******************************************************
 
-// TYPOGRAPHY
-
-@import 'type'
-
-// ******************************************************
-
 // VARIABLES
 
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
+$color-white-trans = rgba(255, 255, 255, 0.6)
 
 $transition-speed = 2000ms
+
+// ******************************************************
+
+// TYPOGRAPHY
+
+@import 'type'
 
 // ******************************************************
 
@@ -65,6 +66,9 @@ img
   &.hide
     opacity: 0
     pointer-events: none
+    
+.drop-shadow
+  filter: drop-shadow( 0px 0px 7px $color-white );
 
 // ******************************************************
 
@@ -97,6 +101,11 @@ img
 
 .menu-item
   pointer-events: auto
+  
+.icon-cart 
+  width: 16px
+
+// ******************************************************
 
 // HOME
 
