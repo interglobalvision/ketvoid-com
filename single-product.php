@@ -74,7 +74,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-        <article class="u-alert grid-item item-s-12"><?php _e('No products'); ?></article>
+        <article class="u-alert grid-item item-s-12"><?php _e('No product'); ?></article>
 <?php
 } ?>
     </div>
