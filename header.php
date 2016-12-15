@@ -27,6 +27,6 @@
 
 <section id="main-container">
 
-  <header id="header">
+  <header id="header" class="text-shadow">
     <h1 class="site-title grid-row justify-between font-size-large"><a href="<?php echo home_url(); ?>">KET</a><a href="<?php echo home_url(); ?>">VOID</a></h1>
   </header>
