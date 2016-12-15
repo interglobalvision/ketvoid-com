@@ -1,4 +1,4 @@
-  <footer id="footer">
+  <footer id="footer" class="text-shadow">
     <nav class="grid-row justify-between align-items-end font-uppercase font-size-medium font-bold">
       <div>
         <a class="menu-item" href="<?php echo home_url('/collection'); ?>">Collections</a>
@@ -10,7 +10,7 @@
 
   if ($cart_count > 0) {
 ?>
-        <a class="footer-cart menu-item" href="<?php echo home_url('/cart'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/img/dist/cart.png">&nbsp;<?php echo $cart_count; ?></a>
+        <a class="footer-cart menu-item" href="<?php echo home_url('/cart'); ?>"><?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/icon-cart.svg'); ?><span>&nbsp;<?php echo $cart_count; ?></span></a>
 <?php
   }
 ?>
