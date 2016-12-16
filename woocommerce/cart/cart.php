@@ -26,13 +26,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<div class="grid-row table-row">
-	<div class="grid-item item-s-1 item-m-1 product-remove">&nbsp;</div>
+<div class="grid-row table-row font-bold margin-bottom-tiny font-uppercase">
 	<div class="grid-item item-s-2 item-m-2 product-thumbnail">&nbsp;</div>
-	<div class="grid-item item-s-4 item-m-6 product-name"><?php _e( 'Product', 'woocommerce' ); ?></div>
-	<div class="grid-item item-s-2 item-m-1 product-price"><?php _e( 'Price', 'woocommerce' ); ?></div>
-	<div class="grid-item item-s-1 item-m-1 product-quantity"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
-	<div class="grid-item item-s-2 item-m-1 product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></div>
+	<div class="grid-item item-s-4 item-m-4 product-name"><?php _e( 'Product', 'woocommerce' ); ?></div>
+	<div class="grid-item item-s-2 item-m-2 product-price"><?php _e( 'Price', 'woocommerce' ); ?></div>
+	<div class="grid-item item-s-2 item-m-1 product-quantity"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
+	<div class="grid-item item-s-2 item-m-2 offset-m-1 product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></div>
 </div>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
@@ -44,20 +43,19 @@ do_action( 'woocommerce_before_cart' ); ?>
 			if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 				$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 				?>
-				<div class="grid-row table-row <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+				<div class="grid-row table-row font-size-medium padding-bottom-small
+				margin-bottom-small <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
 
-					<div class="grid-item item-s-1 item-m-1 grid-row justify-center align-center">
-						<div class="grid-item no-gutter">
-							<?php
-								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-									'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
-									esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
-									__( 'Remove this item', 'woocommerce' ),
-									esc_attr( $product_id ),
-									esc_attr( $_product->get_sku() )
-								), $cart_item_key );
-							?>
-						</div>
+					<div class="cart-remove-item">
+						<?php
+							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
+								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
+								__( 'Remove this item', 'woocommerce' ),
+								esc_attr( $product_id ),
+								esc_attr( $_product->get_sku() )
+							), $cart_item_key );
+						?>
 					</div>
 
 					<div class="grid-item item-s-2 item-m-2">
@@ -72,7 +70,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-4 item-m-6 product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-4 item-m-4 product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
 						<?php
 							if ( ! $product_permalink ) {
 								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
@@ -90,13 +88,13 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-2 item-m-1 product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-2 item-m-2 product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 						?>
 					</div>
 
-					<div class="grid-item item-s-1 item-m-1 product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-2 item-m-1 product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
 						<?php
 							if ( $_product->is_sold_individually() ) {
 								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -113,7 +111,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-2 item-m-1 product-subtotal" data-title="<?php _e( 'Total', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-2 item-m-2 offset-m-1 product-subtotal" data-title="<?php _e( 'Total', 'woocommerce' ); ?>">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 						?>
