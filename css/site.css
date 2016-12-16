@@ -1324,6 +1324,17 @@ img {
   -webkit-filter: drop-shadow(0px 0px 7px #fff);
           filter: drop-shadow(0px 0px 7px #fff);
 }
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-bottom: 1px solid #000;
+}
+input[type=submit] {
+  border: 1px solid #000;
+  background-color: #fff;
+}
 #header {
   position: fixed;
   width: 100%;
@@ -1489,6 +1500,25 @@ img {
   -ms-flex-align: center;
       -ms-grid-row-align: center;
       align-items: center;
+}
+.cart_item {
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+.cart-remove-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+  z-index: 1;
+}
+.quantity input {
+  width: 100%;
+}
+img.attachment-shop_thumbnail {
+  display: block;
 }
 .container {
   width: 96%;
@@ -1756,6 +1786,9 @@ html,
 .min-height-content {
   min-height: calc(100vh - 88px);
 }
+input {
+  padding: 4.666666666666667px;
+}
 #header {
   padding: 7px 14px 0;
 }
@@ -1840,6 +1873,12 @@ body.single-collection {
 .single-product-image {
   width: auto;
   max-height: calc(100vh - 79px);
+}
+.cart-remove-item {
+  left: 7px;
+}
+.quantity input {
+  padding-top: 0;
 }
 @media screen and (min-width: 720px) {
   .container {
@@ -2111,6 +2150,9 @@ body.single-collection {
   .min-height-content {
     min-height: calc(100vh - 107px);
   }
+  input {
+    padding: 7px;
+  }
   #header {
     padding: 10.5px 21px 0;
   }
@@ -2161,6 +2203,12 @@ body.single-collection {
   }
   .archive-collection-item {
     text-align: left;
+  }
+  .cart-remove-item {
+    left: 10.5px;
+  }
+  .quantity input {
+    padding-top: 0;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2433,6 +2481,9 @@ body.single-collection {
   .min-height-content {
     min-height: calc(100vh - 120px);
   }
+  input {
+    padding: 8px;
+  }
   #header {
     padding: 12px 24px 0;
   }
@@ -2448,6 +2499,12 @@ body.single-collection {
   }
   .single-product-image {
     max-height: calc(100vh - 108px);
+  }
+  .cart-remove-item {
+    left: 12px;
+  }
+  .quantity input {
+    padding-top: 0;
   }
 }
 @media screen and (min-width: 1280px) {
