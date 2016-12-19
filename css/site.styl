@@ -74,14 +74,34 @@ img
 
 // FORMS
   
-input 
+input, button
   appearance: none
   border: none
   border-bottom: 1px solid $color-black
-  &[type=submit]
-    border: 1px solid $color-black
-    background-color: $color-white
-
+    
+input[type=submit], button, .button
+  border: 1px solid $color-black
+  background-color: $color-white
+  appearance: none
+  cursor: pointer
+  &:hover 
+    background-color: $color-black
+    color: $color-white
+  &:disabled 
+    opacity: .5
+    cursor: default
+    &:hover
+      background-color: $color-white
+      color: $color-black
+  
+  
+select 
+  appearance: none
+  border: 1px solid $color-black
+  background-color: $color-white
+  width: 100%
+  border-radius: 5px
+  
 // ******************************************************
 
 // HEADER
@@ -241,13 +261,34 @@ input
   border: 1px solid $color-black
   background-color: $color-white 
   z-index: 1
+  svg 
+    width: 20px
+    display: block
+    fill: none
+    stroke: $color-black
+    stroke-miterlimit: 10
+    fill-rule: evenodd
+  &:hover 
+    background-color: $color-black
+    svg 
+      stroke: $color-white
   
 .quantity
   input 
     width: 100%
     
 img.attachment-shop_thumbnail
-  display: block
+  display: block  
+    
+#cart-totals
+  .grid-row
+    border-top: 1px solid $color-black
+    &.wc-proceed-to-checkout
+      border-top: none
+    
+.button-shop
+  border: 1px solid $color-black
+  background-color: $color-white
 
 // ******************************************************
 
@@ -264,7 +305,7 @@ $margin-large = ($gutter * 5)
 
 $font-size-basic = 14px
 $font-size-large = 28px
-$font-size-medium = 21px
+$font-size-medium = 16px
 $font-size-small = 10px
 
 grid(96%, $gutter, s)
