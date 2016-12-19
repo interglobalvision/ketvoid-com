@@ -16,7 +16,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-    <article class="grid-item item-s-12 grid-row u-alert"><?php _e('Sorry, no page matched your criteria :{'); ?></article>
+    <article class="grid-item item-s-12 grid-row u-alert"><?php _e('Not found'); ?></article>
 <?php
 } ?>
     </div>

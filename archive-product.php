@@ -41,7 +41,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-        <article class="u-alert grid-item item-s-12"><?php _e('Sorry, no posts matched your criteria :{'); ?></article>
+        <article class="u-alert grid-item item-s-12"><h1><?php _e('No products'); ?></h1></article>
 <?php
 } ?>
       </div>
