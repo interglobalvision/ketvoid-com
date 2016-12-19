@@ -24,14 +24,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-		<div class="grid-row table-row cart-subtotal">
-			<div class="grid-item item-s-6"><?php _e( 'Subtotal', 'woocommerce' ); ?></div>
+		<div class="grid-row table-row cart-subtotal padding-top-small padding-bottom-small">
+			<div class="grid-item item-s-6 font-bold font-uppercase"><?php _e( 'Subtotal', 'woocommerce' ); ?></div>
 			<div class="grid-item item-s-6 text-align-right" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></div>
 		</div>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-			<div class="grid-row table-row cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-				<div class="grid-item item-s-6"><?php wc_cart_totals_coupon_label( $coupon ); ?></div>
+			<div class="grid-row table-row padding-top-small padding-bottom-small cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+				<div class="grid-item item-s-6 font-bold font-uppercase"><?php wc_cart_totals_coupon_label( $coupon ); ?></div>
 				<div class="grid-item item-s-6 text-align-right" data-title="<?php echo esc_attr( wc_cart_totals_coupon_label( $coupon, false ) ); ?>"><?php wc_cart_totals_coupon_html( $coupon ); ?></div>
 			</div>
 		<?php endforeach; ?>
@@ -46,16 +46,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php elseif ( WC()->cart->needs_shipping() && 'yes' === get_option( 'woocommerce_enable_shipping_calc' ) ) : ?>
 
-			<div class="grid-row table-row shipping">
-				<div class="grid-item item-s-6"><?php _e( 'Shipping', 'woocommerce' ); ?></div>
+			<div class="grid-row table-row shipping  padding-top-small padding-bottom-small">
+				<div class="grid-item item-s-6 font-bold font-uppercase"><?php _e( 'Shipping', 'woocommerce' ); ?></div>
 				<div class="grid-item item-s-6 text-align-right" data-title="<?php esc_attr_e( 'Shipping', 'woocommerce' ); ?>"><?php woocommerce_shipping_calculator(); ?></div>
 			</div>
 
 		<?php endif; ?>
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
-			<div class="grid-row table-row fee">
-				<div class="grid-item item-s-6"><?php echo esc_html( $fee->name ); ?></div>
+			<div class="grid-row table-row fee padding-top-small padding-bottom-small">
+				<div class="grid-item item-s-6 font-bold font-uppercase"><?php echo esc_html( $fee->name ); ?></div>
 				<div class="grid-item item-s-6 text-align-right" data-title="<?php echo esc_attr( $fee->name ); ?>"><?php wc_cart_totals_fee_html( $fee ); ?></div>
 			</div>
 		<?php endforeach; ?>
@@ -68,13 +68,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
 				<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : ?>
-					<div class="grid-row table-row tax-rate tax-rate-<?php echo sanitize_title( $code ); ?>">
-						<div class="grid-item item-s-6"><?php echo esc_html( $tax->label ) . $estimated_text; ?></div>
+					<div class="grid-row table-row  padding-top-small padding-bottom-small tax-rate tax-rate-<?php echo sanitize_title( $code ); ?>">
+						<div class="grid-item item-s-6 font-bold font-uppercase"><?php echo esc_html( $tax->label ) . $estimated_text; ?></div>
 						<div class="grid-item item-s-6 text-align-right" data-title="<?php echo esc_attr( $tax->label ); ?>"><?php echo wp_kses_post( $tax->formatted_amount ); ?></div>
 					</div>
 				<?php endforeach; ?>
 			<?php else : ?>
-				<div class="grid-row table-row tax-total">
+				<div class="grid-row table-row tax-total padding-top-small padding-bottom-small">
 					<div class="grid-item item-s-6"><?php echo esc_html( WC()->countries->tax_or_vat() ) . $estimated_text; ?></div>
 					<div class="grid-item item-s-6 text-align-right" data-title="<?php echo esc_attr( WC()->countries->tax_or_vat() ); ?>"><?php wc_cart_totals_taxes_total_html(); ?></div>
 				</div>
@@ -83,14 +83,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
 
-		<div class="grid-row table-row order-total">
-			<div class="grid-item item-s-6"><?php _e( 'Total', 'woocommerce' ); ?></div>
+		<div class="grid-row table-row order-total padding-top-small padding-bottom-small">
+			<div class="grid-item item-s-6 font-bold font-uppercase"><?php _e( 'Total', 'woocommerce' ); ?></div>
 			<div class="grid-item item-s-6 text-align-right" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></div>
 		</div>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
 
-	<div class="grid-row padding-top-tiny wc-proceed-to-checkout">
+	<div class="grid-row padding-top-tiny wc-proceed-to-checkout padding-top-small padding-bottom-small">
 		<div class="grid-item item-s-12 text-align-right">
 			<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 		</div>

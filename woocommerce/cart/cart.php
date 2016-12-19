@@ -49,7 +49,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<div class="cart-remove-item">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
-								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
+								'<a href="%s" class="remove" title="%s" data-product_id="%s" data-product_sku="%s">' . url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/icon-remove.svg') . '</a>',
 								esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
 								__( 'Remove this item', 'woocommerce' ),
 								esc_attr( $product_id ),
@@ -123,8 +123,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 		do_action( 'woocommerce_cart_contents' );
 		?>
-		<div class="grid-row table-row">
-			<div class="grid-item actions item-s-12 item-m-6">
+		<div class="grid-row table-row margin-bottom-small">
+			<div class="grid-item actions item-s-8 item-m-6">
 
 				<?php if ( wc_coupons_enabled() ) { ?>
 					<div class="coupon row">
@@ -136,7 +136,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<?php } ?>
 			</div>
 
-			<div class="grid-item actions item-s-12 item-m-6 text-align-right">
+			<div class="grid-item actions item-s-4 item-m-6 text-align-right">
 				<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
 			</div>
 
@@ -153,7 +153,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <div class="grid-row">
-	<div class="grid-item item-s-12 item-l-6 offset-l-6 no-gutter">
+	<div id="cart-totals" class="grid-item item-s-12 item-m-6 offset-m-6 no-gutter">
 		<?php do_action( 'woocommerce_cart_collaterals' ); ?>
 	</div>
 </div>
