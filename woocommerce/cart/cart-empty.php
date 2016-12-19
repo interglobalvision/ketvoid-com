@@ -20,8 +20,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-wc_print_notices();
-
 ?>
 
 <div class="grid-row">
