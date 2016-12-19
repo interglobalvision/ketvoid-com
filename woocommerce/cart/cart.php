@@ -27,11 +27,11 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <div class="grid-row table-row font-bold margin-bottom-tiny font-uppercase">
-	<div class="grid-item item-s-2 item-m-2 product-thumbnail">&nbsp;</div>
-	<div class="grid-item item-s-4 item-m-4 product-name"><?php _e( 'Product', 'woocommerce' ); ?></div>
-	<div class="grid-item item-s-2 item-m-2 product-price"><?php _e( 'Price', 'woocommerce' ); ?></div>
-	<div class="grid-item item-s-2 item-m-1 product-quantity"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
-	<div class="grid-item item-s-2 item-m-2 offset-m-1 product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></div>
+	<div class="grid-item item-s-0 item-m-2 product-thumbnail">&nbsp;</div>
+	<div class="grid-item item-s-0 item-m-4 product-name"><?php _e( 'Product', 'woocommerce' ); ?></div>
+	<div class="grid-item item-s-0 item-m-2 product-price"><?php _e( 'Price', 'woocommerce' ); ?></div>
+	<div class="grid-item item-s-0 item-m-1 product-quantity"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
+	<div class="grid-item item-s-0 item-m-2 offset-m-1 product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></div>
 </div>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
@@ -58,7 +58,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-2 item-m-2">
+					<div class="grid-item item-s-4 item-m-2">
 						<?php
 							$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
@@ -70,7 +70,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-4 item-m-4 product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-8 item-m-4 product-name" data-title="<?php _e( 'Product', 'woocommerce' ); ?>">
 						<?php
 							if ( ! $product_permalink ) {
 								echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;';
@@ -88,13 +88,17 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-2 item-m-2 product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-4 item-m-0 product-price font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><?php _e( 'Price', 'woocommerce' ); ?></div>
+					<div class="grid-item item-s-4 item-m-0 product-quantity font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
+					<div class="grid-item item-s-4 item-m-0 offset-m-1 product-subtotal font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><?php _e( 'Total', 'woocommerce' ); ?></div>
+
+					<div class="grid-item item-s-4 item-m-2 product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_price', WC()->cart->get_product_price( $_product ), $cart_item, $cart_item_key );
 						?>
 					</div>
 
-					<div class="grid-item item-s-2 item-m-1 product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-4 item-m-1 product-quantity" data-title="<?php _e( 'Quantity', 'woocommerce' ); ?>">
 						<?php
 							if ( $_product->is_sold_individually() ) {
 								$product_quantity = sprintf( '1 <input type="hidden" name="cart[%s][qty]" value="1" />', $cart_item_key );
@@ -111,7 +115,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-2 item-m-2 offset-m-1 product-subtotal" data-title="<?php _e( 'Total', 'woocommerce' ); ?>">
+					<div class="grid-item item-s-4 item-m-2 offset-m-1 product-subtotal" data-title="<?php _e( 'Total', 'woocommerce' ); ?>">
 						<?php
 							echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key );
 						?>
