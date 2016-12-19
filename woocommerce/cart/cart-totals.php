@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div class="grid-row table-row order-total padding-top-small padding-bottom-small">
 			<div class="grid-item item-s-6 font-bold font-uppercase"><?php _e( 'Total', 'woocommerce' ); ?></div>
-			<div class="grid-item item-s-6 text-align-right" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></div>
+			<div class="grid-item item-s-6 text-align-right font-size-medium" data-title="<?php esc_attr_e( 'Total', 'woocommerce' ); ?>"><?php wc_cart_totals_order_total_html(); ?></div>
 		</div>
 
 		<?php do_action( 'woocommerce_cart_totals_after_order_total' ); ?>
