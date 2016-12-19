@@ -124,6 +124,8 @@ grid($width = false, $gutter = false, $size = false, $cols = 12)
           margin-left: ( 100% / $cols ) * offset
 
     for col in 1..$cols
+      .item-{$size}-0
+        display: none 
       .item-{$size}-{col}
         flex-basis: ( 100% / $cols ) * col
       .grid-row > .item-{$size}-{col}
