@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="grid-row">
   <div class="grid-item item-s-12">
 
-    <p class="cart-empty">
+    <p class="cart-empty font-size-large">
     	<?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?>
     </p>
 
