@@ -1,5 +1,8 @@
 $header-height = 53.5px
 $footer-height = 42.5px
+
+// ******************************************************
+
 // BASIC
 
 .main-content-padding
@@ -8,6 +11,13 @@ $footer-height = 42.5px
 
 .min-height-content 
   min-height: calc('100vh - ' + ($header-height * 2))
+  
+// ******************************************************
+
+// FORMS
+  
+input, select, button, .button
+  padding: $margin-micro
   
 // ******************************************************
 
@@ -72,3 +82,21 @@ body.single-collection
 // SINGLE PRODUCT
 
 // ******************************************************
+
+// CART
+
+.cart-remove-item
+  left: $margin-tiny
+  
+.quantity
+  input 
+    margin-top: -($margin-tiny)
+    
+.button-shop
+  padding: $margin-micro
+  
+#coupon_code
+  width: auto
+  
+.woocommerce-shipping-calculator
+  text-align: right

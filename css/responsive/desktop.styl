@@ -1,6 +1,8 @@
 $header-height = 60px
 $footer-height = 48px
 
+// ******************************************************
+
 // BASIC
 
 .main-content-padding
@@ -9,6 +11,13 @@ $footer-height = 48px
 
 .min-height-content 
   min-height: calc('100vh - ' + ($header-height * 2))
+  
+// ******************************************************
+
+// FORMS
+  
+input, select, button, .button
+  padding: $margin-micro
   
 // ******************************************************
 
@@ -41,3 +50,18 @@ $footer-height = 48px
 
 .single-product-image
   max-height: calc('100vh - ' + ($header-height + $footer-height))
+
+// ******************************************************
+
+// CART
+
+.cart-remove-item
+  left: $margin-tiny
+  
+.quantity
+  input 
+    margin-top: -($margin-tiny)
+
+.button-shop
+  padding: $margin-micro
+  

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<div class="grid-row table-row shipping">
+<div class="grid-row table-row shipping padding-top-small padding-bottom-small">
 	<div class="grid-item item-s-12 item-m-6">
 		<div data-title="<?php echo esc_attr( $package_name ); ?>">
 			<?php if ( 1 < count( $available_methods ) ) : ?>

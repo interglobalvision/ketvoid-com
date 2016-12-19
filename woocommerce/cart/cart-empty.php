@@ -20,14 +20,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-wc_print_notices();
-
 ?>
 
 <div class="grid-row">
   <div class="grid-item item-s-12">
 
-    <p class="cart-empty">
+    <p class="cart-empty font-size-large">
     	<?php _e( 'Your cart is currently empty.', 'woocommerce' ) ?>
     </p>
 

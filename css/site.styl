@@ -69,7 +69,39 @@ img
     
 .drop-shadow
   filter: drop-shadow( 0px 0px 7px $color-white );
+  
+// ******************************************************
 
+// FORMS
+  
+input, button
+  appearance: none
+  border: none
+  border-bottom: 1px solid $color-black
+    
+input[type=submit], button, .button
+  border: 1px solid $color-black
+  background-color: $color-white
+  appearance: none
+  cursor: pointer
+  &:hover 
+    background-color: $color-black
+    color: $color-white
+  &:disabled 
+    opacity: .5
+    cursor: default
+    &:hover
+      background-color: $color-white
+      color: $color-black
+  
+  
+select 
+  appearance: none
+  border: 1px solid $color-black
+  background-color: $color-white
+  width: 100%
+  border-radius: 5px
+  
 // ******************************************************
 
 // HEADER
@@ -212,6 +244,51 @@ img
 
 .swiper-wrapper
   align-items: center
+  
+// ******************************************************
+
+// CART
+
+.cart_item
+  position: relative
+  border-bottom: 1px solid $color-black
+
+.cart-remove-item
+  position: absolute
+  top: 0
+  left: 0
+  color: $color-black
+  border: 1px solid $color-black
+  background-color: $color-white 
+  z-index: 1
+  svg 
+    width: 20px
+    display: block
+    fill: none
+    stroke: $color-black
+    stroke-miterlimit: 10
+    fill-rule: evenodd
+  &:hover 
+    background-color: $color-black
+    svg 
+      stroke: $color-white
+  
+.quantity
+  input 
+    width: 100%
+    
+img.attachment-shop_thumbnail
+  display: block  
+    
+#cart-totals
+  .grid-row
+    border-top: 1px solid $color-black
+    &.wc-proceed-to-checkout
+      border-top: none
+    
+.button-shop
+  border: 1px solid $color-black
+  background-color: $color-white
 
 // ******************************************************
 
@@ -228,7 +305,7 @@ $margin-large = ($gutter * 5)
 
 $font-size-basic = 14px
 $font-size-large = 28px
-$font-size-medium = 21px
+$font-size-medium = 18px
 $font-size-small = 10px
 
 grid(96%, $gutter, s)
@@ -302,6 +379,8 @@ font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-s
   grid(1300px)
 
 @media screen and (min-width: 1680px)
+
+  $gutter = 24px
 
   grid(1600px, $gutter, xl)
 
