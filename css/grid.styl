@@ -127,6 +127,7 @@ grid($width = false, $gutter = false, $size = false, $cols = 12)
       .item-{$size}-0
         display: none 
       .item-{$size}-{col}
+        display: initial
         flex-basis: ( 100% / $cols ) * col
       .grid-row > .item-{$size}-{col}
         max-width: ( 100% / $cols ) * col
