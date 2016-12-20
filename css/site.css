@@ -1343,7 +1343,8 @@ textarea {
   appearance: none;
   border: 1px solid #000;
 }
-input[type=checkbox] {
+input[type=checkbox],
+input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1351,7 +1352,8 @@ input[type=checkbox] {
   margin-bottom: -2px;
   cursor: pointer;
 }
-input[type=checkbox]:checked {
+input[type=checkbox]:checked,
+input[type=radio]:checked {
   background-color: #000;
 }
 input[type=submit],
@@ -1621,12 +1623,17 @@ img.attachment-shop_thumbnail {
   font-weight: bold;
   text-transform: uppercase;
 }
-#customer_details,
-.shipping_address {
+#customer_details {
   border-bottom: 1px solid #000;
+}
+.shipping_address {
+  border-top: 1px solid #000;
 }
 #order_review .grid-row {
   border-bottom: 1px solid #000;
+}
+#order_review .grid-row:last-of-type {
+  border-bottom: 0;
 }
 #order_review .cart-subtotal {
   border-top: 1px solid #000;
@@ -1915,7 +1922,8 @@ select,
 button,
 .button,
 textarea,
-input[type="checkbox"] {
+input[type="checkbox"],
+input[type=radio] {
   padding: 4.666666666666667px;
 }
 #header {
@@ -2308,7 +2316,8 @@ body.single-collection {
   button,
   .button,
   textarea,
-  input[type="checkbox"] {
+  input[type="checkbox"],
+  input[type=radio] {
     padding: 7px;
   }
   #header {
@@ -2664,7 +2673,8 @@ body.single-collection {
   button,
   .button,
   textarea,
-  input[type="checkbox"] {
+  input[type="checkbox"],
+  input[type=radio] {
     padding: 8px;
   }
   #header {

@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 	</div>
 
-	<div id="payment" class="row">
+	<div id="payment" class="grid-row">
     <div class="grid-item item-s-12">
   		<?php if ( $order->needs_payment() ) : ?>
   			<ul class="wc_payment_methods payment_methods methods">
@@ -92,7 +92,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   				?>
   			</ul>
   		<?php endif; ?>
-  		<div class="form-row">
+  		<div class="form-row margin-top-small">
   			<input type="hidden" name="woocommerce_pay" value="1" />
 
   			<?php wc_get_template( 'checkout/terms.php' ); ?>

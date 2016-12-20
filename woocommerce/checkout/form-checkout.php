@@ -49,10 +49,9 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
         </div>
       </div>
 
-      <div class="grid-item item-s-12 item-m-6 offset-m-3">
-        <?php do_action( 'woocommerce_checkout_shipping' ); ?>
-      </div>
     </div>
+
+      <?php do_action( 'woocommerce_checkout_shipping' ); ?>
 
       <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
@@ -72,7 +71,7 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
           <h3 class="font-bold font-size-basic font-uppercase"><?php _e( 'Product', 'woocommerce' ); ?></h3>
         </div>
         <div class="grid-item item-s-6">
-          <h3 class="font-bold font-size-basic font-uppercase"><?php _e( 'Total', 'woocommerce' ); ?></h3>
+          <h3 class="font-bold font-size-basic font-uppercase text-align-right"><?php _e( 'Total', 'woocommerce' ); ?></h3>
         </div>
       </div>
 

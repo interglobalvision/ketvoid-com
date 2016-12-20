@@ -83,13 +83,14 @@ textarea
   appearance: none 
   border: 1px solid $color-black
   
-input[type=checkbox]
-  appearance: none 
-  border: 1px solid $color-black
-  margin-bottom: -2px
-  cursor: pointer
-  &:checked 
-    background-color: $color-black
+input
+  &[type=checkbox], &[type=radio]
+    appearance: none 
+    border: 1px solid $color-black
+    margin-bottom: -2px
+    cursor: pointer
+    &:checked 
+      background-color: $color-black
     
 input[type=submit], button, .button
   border: 1px solid $color-black
@@ -320,12 +321,17 @@ img.attachment-shop_thumbnail
     font-weight: bold
     text-transform: uppercase
     
-#customer_details, .shipping_address
+#customer_details
   border-bottom: 1px solid $color-black
+  
+.shipping_address
+  border-top: 1px solid $color-black
   
 #order_review
   .grid-row 
     border-bottom: 1px solid $color-black
+    &:last-of-type 
+      border-bottom: 0
   .cart-subtotal 
     border-top: 1px solid $color-black
   .cart_item
