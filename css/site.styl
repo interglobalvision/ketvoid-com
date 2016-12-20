@@ -314,6 +314,13 @@ space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-m
 
 font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-size-small)
 
+.mobile-hidden
+  visibility: hidden
+  height: 0
+  width: 0
+  padding: 0
+  margin: 0
+
 @import 'responsive/mobile'
 
 @media screen and (min-width: 720px)
@@ -340,6 +347,13 @@ font-sizes($font-size-basic, false, $font-size-large, $font-size-medium, $font-s
 
   .mobile-only
     display: none
+    
+  .mobile-hidden
+    visibility: visible
+    height: auto
+    width: auto
+    padding: auto
+    margin: auto
 
   @import 'responsive/tablet'
 

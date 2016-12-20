@@ -26,12 +26,12 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<div class="grid-row table-row font-bold margin-bottom-tiny font-uppercase">
-	<div class="grid-item item-s-0 item-m-2 product-thumbnail">&nbsp;</div>
-	<div class="grid-item item-s-0 item-m-4 product-name"><?php _e( 'Product', 'woocommerce' ); ?></div>
-	<div class="grid-item item-s-0 item-m-2 product-price"><?php _e( 'Price', 'woocommerce' ); ?></div>
-	<div class="grid-item item-s-0 item-m-1 product-quantity"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
-	<div class="grid-item item-s-0 item-m-2 offset-m-1 product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></div>
+<div class="grid-row table-row font-bold margin-bottom-tiny font-uppercase mobile-hidden">
+	<div class="grid-item item-m-2 product-thumbnail">&nbsp;</div>
+	<div class="grid-item item-m-4 product-name"><?php _e( 'Product', 'woocommerce' ); ?></div>
+	<div class="grid-item item-m-2 product-price"><?php _e( 'Price', 'woocommerce' ); ?></div>
+	<div class="grid-item item-m-1 product-quantity"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
+	<div class="grid-item item-m-2 offset-m-1 product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></div>
 </div>
 		<?php do_action( 'woocommerce_before_cart_contents' ); ?>
 
@@ -88,9 +88,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 						?>
 					</div>
 
-					<div class="grid-item item-s-4 item-m-0 product-price font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><?php _e( 'Price', 'woocommerce' ); ?></div>
-					<div class="grid-item item-s-4 item-m-0 product-quantity font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
-					<div class="grid-item item-s-4 item-m-0 offset-m-1 product-subtotal font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><?php _e( 'Total', 'woocommerce' ); ?></div>
+					<div class="grid-item item-s-4 mobile-only product-price font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><?php _e( 'Price', 'woocommerce' ); ?></div>
+					<div class="grid-item item-s-4 mobile-only product-quantity font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><span class="only-desktop"><?php _e( 'Quantity', 'woocommerce' ); ?></span></div>
+					<div class="grid-item item-s-4 mobile-only offset-m-1 product-subtotal font-uppercase font-bold font-size-basic margin-top-small margin-bottom-tiny"><?php _e( 'Total', 'woocommerce' ); ?></div>
 
 					<div class="grid-item item-s-4 item-m-2 product-price" data-title="<?php _e( 'Price', 'woocommerce' ); ?>">
 						<?php

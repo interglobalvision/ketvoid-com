@@ -1844,6 +1844,13 @@ html,
 .font-size-small {
   font-size: 10px;
 }
+.mobile-hidden {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  padding: 0;
+  margin: 0;
+}
 .main-content-padding {
   padding-top: 44px;
   padding-bottom: 35px;
@@ -2216,6 +2223,13 @@ body.single-collection {
   }
   .mobile-only {
     display: none;
+  }
+  .mobile-hidden {
+    visibility: visible;
+    height: auto;
+    width: auto;
+    padding: auto;
+    margin: auto;
   }
   .main-content-padding {
     padding-top: 53.5px;
