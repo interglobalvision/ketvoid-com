@@ -21,14 +21,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<div class="woocommerce-shipping-fields grid-column">
+<div class="woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
 
-		<div class="shipping_address grid-column">
+		<div class="shipping_address grid-row margin-top-basic">
 
-			<div class="grid-item item-s-12">
-				<h3>Shipping Address</h3>
-			</div>
+			<h3 class="font-size-medium margin-bottom-small">Shipping Address</h3>
 
 			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
 

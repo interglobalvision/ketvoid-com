@@ -24,7 +24,7 @@ normalize()
 
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
-$color-white-trans = rgba(255, 255, 255, 0.6)
+$color-white-trans = rgba(255, 255, 255, .6)
 
 $transition-speed = 2000ms
 
@@ -68,7 +68,7 @@ img
     pointer-events: none
     
 .drop-shadow
-  filter: drop-shadow( 0px 0px 7px $color-white );
+  filter: drop-shadow(0 0 7px $color-white)
   
 // ******************************************************
 
@@ -76,8 +76,20 @@ img
   
 input, button
   appearance: none
-  border: none
+  border: 0
   border-bottom: 1px solid $color-black
+  
+textarea
+  appearance: none 
+  border: 1px solid $color-black
+  
+input[type=checkbox]
+  appearance: none 
+  border: 1px solid $color-black
+  margin-bottom: -2px
+  cursor: pointer
+  &:checked 
+    background-color: $color-black
     
 input[type=submit], button, .button
   border: 1px solid $color-black
@@ -94,7 +106,6 @@ input[type=submit], button, .button
       background-color: $color-white
       color: $color-black
   
-  
 select 
   appearance: none
   border: 1px solid $color-black
@@ -102,6 +113,10 @@ select
   width: 100%
   border-radius: 5px
   
+input, select, textarea, button 
+  &:focus
+    outline: 0
+    
 // ******************************************************
 
 // HEADER
@@ -289,6 +304,35 @@ img.attachment-shop_thumbnail
 .button-shop
   border: 1px solid $color-black
   background-color: $color-white
+  
+// ******************************************************
+
+// CHECKOUT 
+
+.form-row 
+  label, input, textarea
+    display: block
+    width: 100%
+  input
+    &[type=submit]
+      width: auto
+  label 
+    font-weight: bold
+    text-transform: uppercase
+    
+#customer_details, .shipping_address
+  border-bottom: 1px solid $color-black
+  
+#order_review
+  .grid-row 
+    border-bottom: 1px solid $color-black
+  .cart-subtotal 
+    border-top: 1px solid $color-black
+  .cart_item
+    border-bottom: none
+    
+.about_paypal
+  display: none
 
 // ******************************************************
 

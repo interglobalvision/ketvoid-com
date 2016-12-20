@@ -1326,16 +1326,33 @@ img {
   pointer-events: none;
 }
 .drop-shadow {
-  -webkit-filter: drop-shadow(0px 0px 7px #fff);
-          filter: drop-shadow(0px 0px 7px #fff);
+  -webkit-filter: drop-shadow(0 0 7px #fff);
+          filter: drop-shadow(0 0 7px #fff);
 }
 input,
 button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none;
+  border: 0;
   border-bottom: 1px solid #000;
+}
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+}
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+input[type=checkbox]:checked {
+  background-color: #000;
 }
 input[type=submit],
 button,
@@ -1375,6 +1392,12 @@ select {
   background-color: #fff;
   width: 100%;
   border-radius: 5px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 0;
 }
 #header {
   position: fixed;
@@ -1584,6 +1607,35 @@ img.attachment-shop_thumbnail {
 .button-shop {
   border: 1px solid #000;
   background-color: #fff;
+}
+.form-row label,
+.form-row input,
+.form-row textarea {
+  display: block;
+  width: 100%;
+}
+.form-row input[type=submit] {
+  width: auto;
+}
+.form-row label {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#customer_details,
+.shipping_address {
+  border-bottom: 1px solid #000;
+}
+#order_review .grid-row {
+  border-bottom: 1px solid #000;
+}
+#order_review .cart-subtotal {
+  border-top: 1px solid #000;
+}
+#order_review .cart_item {
+  border-bottom: none;
+}
+.about_paypal {
+  display: none;
 }
 .container {
   width: 96%;
@@ -1861,7 +1913,9 @@ html,
 input,
 select,
 button,
-.button {
+.button,
+textarea,
+input[type="checkbox"] {
   padding: 4.666666666666667px;
 }
 #header {
@@ -1960,6 +2014,17 @@ body.single-collection {
 }
 #coupon_code {
   width: 40%;
+}
+.form-row {
+  margin-bottom: 14px;
+}
+.form-row label {
+  margin-bottom: 4.666666666666667px;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  font-size: 18px;
 }
 @media screen and (min-width: 720px) {
   .container {
@@ -2241,7 +2306,9 @@ body.single-collection {
   input,
   select,
   button,
-  .button {
+  .button,
+  textarea,
+  input[type="checkbox"] {
     padding: 7px;
   }
   #header {
@@ -2309,6 +2376,17 @@ body.single-collection {
   }
   .woocommerce-shipping-calculator {
     text-align: right;
+  }
+  .form-row {
+    margin-bottom: 21px;
+  }
+  .form-row label {
+    margin-bottom: 7px;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    font-size: 24px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -2584,7 +2662,9 @@ body.single-collection {
   input,
   select,
   button,
-  .button {
+  .button,
+  textarea,
+  input[type="checkbox"] {
     padding: 8px;
   }
   #header {
@@ -2611,6 +2691,17 @@ body.single-collection {
   }
   .button-shop {
     padding: 8px;
+  }
+  .form-row {
+    margin-bottom: 24px;
+  }
+  .form-row label {
+    margin-bottom: 8px;
+  }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    font-size: 27px;
   }
 }
 @media screen and (min-width: 1280px) {

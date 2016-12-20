@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="shop_table woocommerce-checkout-review-order-table">
+<div class="shop_table woocommerce-checkout-review-order-table margin-bottom-small">
 <?php
   do_action( 'woocommerce_review_order_before_cart_contents' );
 
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
       ?>
-      <div class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'row table-row cart_item', $cart_item, $cart_item_key ) ); ?>">
+      <div class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'grid-row cart_item margin-bottom-small', $cart_item, $cart_item_key ) ); ?>">
         <div class="grid-item item-s-6 product-name">
           <span>
             <?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php echo WC()->cart->get_item_data( $cart_item ); ?>
           </span>
         </div>
-        <div class="grid-item item-s-6 text-align-right product-total">
+        <div class="grid-item item-s-6 product-total">
             <?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
         </div>
       </div>

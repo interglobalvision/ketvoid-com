@@ -34,30 +34,22 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
 
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
-  <div id="customer_details">
-    <div class="grid-row table-row">
-      <div class="grid-item item-s-12">
-      <?php if ( wc_ship_to_billing_address_only() && WC()->cart->needs_shipping() ) { ?>
-        <h3><?php _e( 'Billing &amp; Shipping', 'woocommerce' ); ?></h3>
-      <?php } else { ?>
-        <h3><?php _e( 'Billing Details', 'woocommerce' ); ?></h3>
-      <?php }; ?>
-      </div>
-    </div>
+  <div id="customer_details" class="padding-bottom-small margin-bottom-basic">
 
     <div class="grid-row table-row">
-      <div class="grid-item item-s-12 offset-s-6 margin-top-tiny">
-        <h3 id="ship-to-different-address">
-          <label for="ship-to-different-address-checkbox" class="checkbox"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></label>
-          <input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
-        </h3>
-      </div>
 
-      <div class="grid-item item-s-12 item-m-6">
+      <div class="grid-item item-s-12 item-m-6 offset-m-3">
         <?php do_action( 'woocommerce_checkout_billing' ); ?>
       </div>
 
-      <div class="grid-item item-s-12 item-m-6">
+      <div class="grid-item item-s-12 item-m-6 offset-m-3 margin-top-tiny margin-bottom-small">
+        <div id="ship-to-different-address">
+          <label for="ship-to-different-address-checkbox" class="checkbox font-bold font-uppercase"><?php _e( 'Ship to a different address?', 'woocommerce' ); ?></label>
+          <input id="ship-to-different-address-checkbox" class="input-checkbox" <?php checked( apply_filters( 'woocommerce_ship_to_different_address_checked', 'shipping' === get_option( 'woocommerce_ship_to_destination' ) ? 1 : 0 ), 1 ); ?> type="checkbox" name="ship_to_different_address" value="1" />
+        </div>
+      </div>
+
+      <div class="grid-item item-s-12 item-m-6 offset-m-3">
         <?php do_action( 'woocommerce_checkout_shipping' ); ?>
       </div>
     </div>
@@ -68,19 +60,19 @@ if ( ! $checkout->enable_signup && ! $checkout->enable_guest_checkout && ! is_us
   </div>
 
   <div class="grid-row">
-    <div class="grid-item item-s-12 item-m-6 offset-m-6 no-gutter">
-      <div id="order_review_heading" class="grid-row table-row">
+    <div class="grid-item item-s-12 item-m-6 offset-m-3 no-gutter">
+      <div id="order_review_heading" class="grid-row table-row margin-bottom-small">
         <div class="grid-item item-s-12">
-          <h3><?php _e( 'Your order', 'woocommerce' ); ?></h3>
+          <h3 class="font-size-medium"><?php _e( 'Your order', 'woocommerce' ); ?></h3>
         </div>
       </div>
 
-      <div class="grid-row table-row">
-        <div class="grid-item item-s-12 item-m-6">
-          <h3><?php _e( 'Product', 'woocommerce' ); ?></h3>
+      <div class="grid-row table-row margin-bottom-tiny">
+        <div class="grid-item item-s-6">
+          <h3 class="font-bold font-size-basic font-uppercase"><?php _e( 'Product', 'woocommerce' ); ?></h3>
         </div>
-        <div class="grid-item item-s-12 item-m-6 text-align-right">
-          <h3><?php _e( 'Total', 'woocommerce' ); ?></h3>
+        <div class="grid-item item-s-6">
+          <h3 class="font-bold font-size-basic font-uppercase"><?php _e( 'Total', 'woocommerce' ); ?></h3>
         </div>
       </div>
 
