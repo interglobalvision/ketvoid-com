@@ -1329,6 +1329,8 @@ img {
   -webkit-filter: drop-shadow(0 0 7px #fff);
           filter: drop-shadow(0 0 7px #fff);
 }
+.woocommerce-message,
+display: none !important,
 input,
 button {
   -webkit-appearance: none;
