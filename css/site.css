@@ -1581,6 +1581,29 @@ button:focus {
 .amount {
   display: block;
 }
+.slider-pagination-holder {
+  font-size: 0;
+}
+.slider-next {
+  color: #000;
+  border: 1px solid #000;
+  background-color: #fff;
+  display: inline-block;
+  cursor: pointer;
+}
+.slider-next svg {
+  display: block;
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  fill-rule: evenodd;
+}
+.slider-next:hover {
+  background-color: #000;
+}
+.slider-next:hover svg {
+  stroke: #fff;
+}
 .cart_item {
   position: relative;
   border-bottom: 1px solid #000;
@@ -2037,6 +2060,9 @@ body.single-collection {
 .quantity {
   margin-bottom: 14px;
 }
+.slider-next svg {
+  height: 30px;
+}
 .cart-remove-item {
   left: 7px;
 }
@@ -2409,6 +2435,9 @@ body.single-collection {
   .quantity {
     margin-bottom: 21px;
   }
+  .slider-next svg {
+    height: 34px;
+  }
   .cart-remove-item {
     left: 10.5px;
   }
@@ -2742,6 +2771,9 @@ body.single-collection {
   }
   .quantity {
     margin-bottom: 24px;
+  }
+  .slider-next svg {
+    height: 39px;
   }
   .cart-remove-item {
     left: 12px;
