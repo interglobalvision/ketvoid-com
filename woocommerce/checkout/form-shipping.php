@@ -21,24 +21,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 ?>
-<div class="woocommerce-shipping-fields grid-column">
+<div class="woocommerce-shipping-fields">
 	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
 
-		<div class="shipping_address grid-column">
+		<div class="shipping_address grid-row margin-top-small padding-top-basic">
 
-			<div class="grid-item item-s-12">
-				<h3>Shipping Address</h3>
+			<div class="grid-item item-s-12 item-m-6 offset-m-3">
+
+				<h3 class="font-size-medium margin-bottom-small">Shipping Address</h3>
+
+				<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
+
+				<?php foreach ( $checkout->checkout_fields['shipping'] as $key => $field ) : ?>
+
+						<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
+
+				<?php endforeach; ?>
+
+				<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
+
 			</div>
-
-			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
-
-			<?php foreach ( $checkout->checkout_fields['shipping'] as $key => $field ) : ?>
-
-					<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
-
-			<?php endforeach; ?>
-
-			<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
 
 		</div>
 

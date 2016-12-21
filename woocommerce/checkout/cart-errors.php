@@ -22,8 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 
-<?php wc_print_notices(); ?>
-
 <p><?php _e( 'There are some issues with the items in your cart (shown above). Please go back to the cart page and resolve these issues before checking out.', 'woocommerce' ) ?></p>
 
 <?php do_action( 'woocommerce_cart_has_errors' ); ?>

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
-<div class="shop_table woocommerce-checkout-review-order-table">
+<div class="shop_table woocommerce-checkout-review-order-table margin-bottom-small">
 <?php
   do_action( 'woocommerce_review_order_before_cart_contents' );
 
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_checkout_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
       ?>
-      <div class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'row table-row cart_item', $cart_item, $cart_item_key ) ); ?>">
+      <div class="<?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'grid-row cart_item margin-bottom-small', $cart_item, $cart_item_key ) ); ?>">
         <div class="grid-item item-s-6 product-name">
           <span>
             <?php echo apply_filters( 'woocommerce_cart_item_name', $_product->get_title(), $cart_item, $cart_item_key ) . '&nbsp;'; ?>
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <?php echo WC()->cart->get_item_data( $cart_item ); ?>
           </span>
         </div>
-        <div class="grid-item item-s-6 text-align-right product-total">
+        <div class="grid-item item-s-6 product-total text-align-right">
             <?php echo apply_filters( 'woocommerce_cart_item_subtotal', WC()->cart->get_product_subtotal( $_product, $cart_item['quantity'] ), $cart_item, $cart_item_key ); ?>
         </div>
       </div>
@@ -49,8 +49,8 @@ if ( ! defined( 'ABSPATH' ) ) {
   do_action( 'woocommerce_review_order_after_cart_contents' );
 ?>
 
-		<div class="grid-row table-row cart-subtotal">
-      <div class="grid-item item-s-6">
+		<div class="grid-row padding-top-small padding-bottom-small table-row cart-subtotal">
+      <div class="grid-item item-s-6 font-uppercase font-bold">
         <span><?php _e( 'Subtotal', 'woocommerce' ); ?></span>
       </div>
       <div class="grid-item item-s-6 text-align-right">
@@ -59,8 +59,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
-		<div class="grid-row cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
-      <div class="grid-item item-s-6">
+		<div class="grid-row padding-top-small padding-bottom-small cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">
+      <div class="grid-item item-s-6 font-uppercase font-bold">
 				<span><?php wc_cart_totals_coupon_label( $coupon ); ?></span>
       </div>
       <div class="grid-item item-s-6 text-align-right">
@@ -80,8 +80,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php endif; ?>
 
 		<?php foreach ( WC()->cart->get_fees() as $fee ) : ?>
-      <div class="grid-row fee">
-        <div class="grid-item item-s-12 item-m-6">
+      <div class="grid-row padding-top-small padding-bottom-small fee">
+        <div class="grid-item item-s-12 item-m-6 font-uppercase font-bold">
           <span><?php echo esc_html( $fee->name ); ?></span>
         </div>
         <div class="grid-item item-s-12 item-m-6 text-align-right">
@@ -93,8 +93,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( wc_tax_enabled() && 'excl' === WC()->cart->tax_display_cart ) : ?>
 			<?php if ( 'itemized' === get_option( 'woocommerce_tax_total_display' ) ) : ?>
 				<?php foreach ( WC()->cart->get_tax_totals() as $code => $tax ) : ?>
-        <div class="grid-row table-row tax-rate tax-rate-<?php echo sanitize_title( $code ); ?>">
-          <div class="grid-item item-s-12 item-m-6">
+        <div class="grid-row table-row padding-top-small padding-bottom-small tax-rate tax-rate-<?php echo sanitize_title( $code ); ?>">
+          <div class="grid-item item-s-12 item-m-6 font-uppercase font-bold">
 						<span><?php echo esc_html( $tax->label ); ?></span>
           </div>
           <div class="grid-item item-s-12 item-m-6 text-align-right">
@@ -103,7 +103,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         </div>
 				<?php endforeach; ?>
 			<?php else : ?>
-				<div class="grid-row table-row tax-total">
+				<div class="grid-row table-row tax-total padding-top-small padding-bottom-small">
           <div class="grid-item item-s-12 item-m-6">
             <span><?php echo esc_html( WC()->countries->tax_or_vat() ); ?></span>
           </div>
@@ -116,11 +116,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php do_action( 'woocommerce_review_order_before_order_total' ); ?>
 
-		<div class="grid-row table-row order-total">
-      <div class="grid-item item-s-6">
+		<div class="grid-row padding-top-small padding-bottom-small table-row order-total">
+      <div class="grid-item item-s-6 font-uppercase font-bold">
         <span><?php _e( 'Total', 'woocommerce' ); ?></span>
       </div>
-      <div class="grid-item item-s-6 text-align-right">
+      <div class="grid-item item-s-6 text-align-right font-size-medium">
         <span><?php wc_cart_totals_order_total_html(); ?></span>
       </div>
 		</div>

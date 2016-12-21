@@ -16,7 +16,7 @@ $footer-height = 42.5px
 
 // FORMS
   
-input, select, button, .button
+input, select, button, .button, textarea, input[type="checkbox"], input[type=radio]
   padding: $margin-micro
   
 // ******************************************************
@@ -100,3 +100,15 @@ body.single-collection
   
 .woocommerce-shipping-calculator
   text-align: right
+  
+// ******************************************************
+
+// CHECKOUT 
+
+.form-row 
+  margin-bottom: $margin-small
+  label
+    margin-bottom: $margin-micro 
+  input, select, textarea
+    font-size: $font-size-medium
+    

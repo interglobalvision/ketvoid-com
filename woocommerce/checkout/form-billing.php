@@ -25,9 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="woocommerce-billing-fields grid-column">
 
-	<div class="grid-item item-s-12 no-gutter">
-		<h3>Billing Address</h3>
-	</div>
+	<h3 class="font-size-medium margin-bottom-small">Billing Address</h3>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
 
