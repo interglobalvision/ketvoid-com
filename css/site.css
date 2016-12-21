@@ -1329,8 +1329,9 @@ img {
   -webkit-filter: drop-shadow(0 0 7px #fff);
           filter: drop-shadow(0 0 7px #fff);
 }
-.woocommerce-message,
-display: none !important,
+.woocommerce-message {
+  display: none !important;
+}
 input,
 button {
   -webkit-appearance: none;
@@ -1568,6 +1569,17 @@ button:focus {
   -ms-flex-align: center;
       -ms-grid-row-align: center;
       align-items: center;
+}
+.variations_form .variations {
+  width: 100%;
+}
+.variations_form .reset_variations {
+  display: none !important;
+  width: 0;
+  height: 0;
+}
+.amount {
+  display: block;
 }
 .cart_item {
   position: relative;
@@ -1914,7 +1926,7 @@ html,
 }
 .main-content-padding {
   padding-top: 44px;
-  padding-bottom: 35px;
+  padding-bottom: 66px;
 }
 .min-height-content {
   min-height: calc(100vh - 88px);
@@ -2000,7 +2012,7 @@ body.single-collection {
 }
 .single-collection-text {
   width: 100%;
-  padding: 28px 28px 35px;
+  padding: 28px 28px 38px;
   margin-top: 20vh;
   -ms-flex: 1 1;
   -webkit-box-flex: 1;
@@ -2011,7 +2023,19 @@ body.single-collection {
 }
 .single-product-image {
   width: auto;
-  max-height: calc(100vh - 79px);
+  max-height: 70vh;
+}
+.variations_form .variations td {
+  padding-bottom: 14px;
+}
+.variations_form td.label {
+  padding-right: 14px;
+}
+.amount {
+  margin-bottom: 14px;
+}
+.quantity {
+  margin-bottom: 14px;
 }
 .cart-remove-item {
   left: 7px;
@@ -2308,7 +2332,7 @@ body.single-collection {
   }
   .main-content-padding {
     padding-top: 53.5px;
-    padding-bottom: 42.5px;
+    padding-bottom: 53px;
   }
   .min-height-content {
     min-height: calc(100vh - 107px);
@@ -2372,6 +2396,18 @@ body.single-collection {
   }
   .archive-collection-item {
     text-align: left;
+  }
+  .variations_form .variations td {
+    padding-bottom: 21px;
+  }
+  .variations_form td.label {
+    padding-right: 21px;
+  }
+  .amount {
+    margin-bottom: 21px;
+  }
+  .quantity {
+    margin-bottom: 21px;
   }
   .cart-remove-item {
     left: 10.5px;
@@ -2665,7 +2701,7 @@ body.single-collection {
   }
   .main-content-padding {
     padding-top: 60px;
-    padding-bottom: 48px;
+    padding-bottom: 60px;
   }
   .min-height-content {
     min-height: calc(100vh - 120px);
@@ -2693,7 +2729,19 @@ body.single-collection {
     pointer-events: none;
   }
   .single-product-image {
-    max-height: calc(100vh - 108px);
+    max-height: calc(100vh - 120px);
+  }
+  .variations_form .variations td {
+    padding-bottom: 24px;
+  }
+  .variations_form td.label {
+    padding-right: 24px;
+  }
+  .amount {
+    margin-bottom: 24px;
+  }
+  .quantity {
+    margin-bottom: 24px;
   }
   .cart-remove-item {
     left: 12px;
