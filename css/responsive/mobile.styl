@@ -1,11 +1,11 @@
 $header-height = 44px
-$footer-height = 35px
+$footer-height = 38px
 
 // BASIC
 
 .main-content-padding
   padding-top: $header-height
-  padding-bottom: $footer-height
+  padding-bottom: ($footer-height + $margin-basic)
   
 .min-height-content 
   min-height: calc('100vh - ' + ($header-height * 2))
@@ -102,7 +102,20 @@ body.single-collection
 
 .single-product-image
   width: auto
-  max-height: calc('100vh - ' + ($header-height + $footer-height))
+  max-height: 70vh
+  
+.variations_form
+  .variations 
+    td
+      padding-bottom: $margin-small
+  td.label
+    padding-right: $margin-small
+
+.amount
+  margin-bottom: $margin-small
+  
+.quantity
+  margin-bottom: $margin-small
 
 // ******************************************************
 
