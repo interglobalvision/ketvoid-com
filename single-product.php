@@ -53,8 +53,10 @@ if( have_posts() ) {
 <?php 
     if (!empty($image_ids)) {
 ?>
-            <div>
-              <button class="slider-pagination-button slider-next"> > </button>
+            <div class="slider-pagination-holder">
+              <div class="slider-pagination-button slider-next">
+                <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/icon-next.svg'); ?>
+              </div>
             </div>
 <?php 
     }
