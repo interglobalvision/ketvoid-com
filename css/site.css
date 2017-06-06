@@ -2775,6 +2775,9 @@ body.single-collection {
   .quantity {
     margin-bottom: 24px;
   }
+  #product-gallery-container {
+    height: calc(100vh - 120px);
+  }
   .slider-next svg {
     height: 39px;
   }
