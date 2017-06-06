@@ -6,14 +6,14 @@ $footer-height = 38px
 .main-content-padding
   padding-top: $header-height
   padding-bottom: ($footer-height + $margin-basic)
-  
-.min-height-content 
+
+.min-height-content
   min-height: calc('100vh - ' + ($header-height * 2))
-  
+
 // ******************************************************
 
 // FORMS
-  
+
 input, select, button, .button, textarea, input[type="checkbox"], input[type=radio]
   padding: $margin-micro
 
@@ -82,10 +82,14 @@ body.single-collection
   max-height: 100%
   width: auto
   padding: 20vh 0 10vh
-  
+
+.single-collection-video
+  width: 100vw
+  height: calc('100vw * 9 / 16')
+
 .single-collection-text
   width: 100%
-  padding: $margin-basic $margin-basic $footer-height 
+  padding: $margin-basic $margin-basic $footer-height
   margin-top: 20vh
   flex: 1 1
 
@@ -103,9 +107,9 @@ body.single-collection
 .single-product-image
   width: auto
   max-height: 70vh
-  
+
 .variations_form
-  .variations 
+  .variations
     td
       padding-bottom: $margin-small
   td.label
@@ -113,12 +117,12 @@ body.single-collection
 
 .amount
   margin-bottom: $margin-small
-  
+
 .quantity
   margin-bottom: $margin-small
-  
+
 .slider-next
-  svg 
+  svg
     height: 30px
 
 // ******************************************************
@@ -127,25 +131,24 @@ body.single-collection
 
 .cart-remove-item
   left: $margin-tiny
-  
+
 .quantity
-  input 
+  input
     margin-top: -($margin-tiny)
-    
+
 .button-shop
   padding: $margin-micro
-  
+
 #coupon_code
   width: 40%
-  
+
 // ******************************************************
 
-// CHECKOUT 
+// CHECKOUT
 
-.form-row 
+.form-row
   margin-bottom: $margin-small
   label
-    margin-bottom: $margin-micro 
+    margin-bottom: $margin-micro
   input, select, textarea
     font-size: $font-size-medium
-
