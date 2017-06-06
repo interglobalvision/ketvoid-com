@@ -12,9 +12,19 @@ get_header();
 if( have_posts() ) {
   while( have_posts() ) {
     the_post();
+
+    $alt_url = get_post_meta($post->ID, '_igv_collection_alt_url', true);
+
+    if (!empty($alt_url)) {
+      $link = $alt_url;
+    } else {
+      $link = get_the_permalink();
+    }
 ?>
           <article <?php post_class('archive-collection-item'); ?> id="post-<?php the_ID(); ?>">
-            <h2 class="font-size-large text-shadow"><a href="<?php the_permalink() ?>" class="archive-collection-link"><?php the_title(); ?></a></h2>
+            <h2 class="font-size-large text-shadow">
+              <a href="<?php echo $link; ?>" class="archive-collection-link"><?php the_title(); ?></a>
+            </h2>
             <div class="archive-collection-image-holder grid-row">
               <?php the_post_thumbnail('item-l-3-4x3'); ?>
             </div>
