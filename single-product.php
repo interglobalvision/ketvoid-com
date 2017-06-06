@@ -24,18 +24,18 @@ if( have_posts() ) {
         <article <?php post_class('grid-row'); ?> id="post-<?php the_ID(); ?>">
 
           <div class="grid-item item-s-10 offset-s-1 item-m-7 offset-m-0 item-l-6">
-<?php 
+<?php
     if (!empty($image_ids)) {
 ?>
-            <div class="swiper-container">
+            <div id="product-gallery-container" class="swiper-container">
               <div class="swiper-wrapper">
-<?php 
+<?php
       foreach ($image_ids as $id) {
 ?>
               <div class="swiper-slide grid-column justify-center align-items-center">
                 <?php echo wp_get_attachment_image( $id, 'full', '', 'class=single-product-image' ); ?>
               </div>
-<?php 
+<?php
       }
 ?>
               </div>
@@ -44,13 +44,13 @@ if( have_posts() ) {
     } else {
 ?>
             <?php the_post_thumbnail('full', 'class=single-product-image'); ?>
-<?php 
+<?php
     }
 ?>
           </div>
 
           <div class="grid-item item-s-1 grid-column justify-end">
-<?php 
+<?php
     if (!empty($image_ids)) {
 ?>
             <div class="slider-pagination-holder">
@@ -58,7 +58,7 @@ if( have_posts() ) {
                 <?php echo url_get_contents(get_bloginfo('stylesheet_directory') . '/img/dist/icon-next.svg'); ?>
               </div>
             </div>
-<?php 
+<?php
     }
 ?>
           </div>
