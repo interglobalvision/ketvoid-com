@@ -115,5 +115,12 @@ function igv_cmb_metaboxes() {
     'sanitization_cb' => 'pw_gallery_field_sanitise', // REQUIRED
   ) );
 
+  $collection_meta->add_field( array(
+    'name' => __( 'Vimeo video ID', 'cmb2' ),
+    'desc' => __( 'string of numbers from Vimeo URL: https://vimeo.com/#########', 'cmb2' ),
+    'id'   => $prefix . 'collection_vimeo_id',
+    'type' => 'text',
+  ) );
+
 }
 ?>
