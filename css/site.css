@@ -1959,7 +1959,7 @@ select,
 button,
 .button,
 textarea,
-input[type="checkbox"],
+input[type='checkbox'],
 input[type=radio] {
   padding: 4.666666666666667px;
 }
@@ -2368,7 +2368,7 @@ body.single-collection {
   button,
   .button,
   textarea,
-  input[type="checkbox"],
+  input[type='checkbox'],
   input[type=radio] {
     padding: 7px;
   }
@@ -2434,6 +2434,9 @@ body.single-collection {
   }
   .quantity {
     margin-bottom: 21px;
+  }
+  #product-gallery-container {
+    height: calc(100vh - 106.5px);
   }
   .slider-next svg {
     height: 34px;
@@ -2740,7 +2743,7 @@ body.single-collection {
   button,
   .button,
   textarea,
-  input[type="checkbox"],
+  input[type='checkbox'],
   input[type=radio] {
     padding: 8px;
   }

@@ -9,16 +9,16 @@ $footer-height = 53px
   padding-top: $header-height
   padding-bottom: $footer-height
 
-.min-height-content 
+.min-height-content
   min-height: calc('100vh - ' + ($header-height * 2))
-  
+
 // ******************************************************
 
 // FORMS
-  
-input, select, button, .button, textarea, input[type="checkbox"], input[type=radio]
+
+input, select, button, .button, textarea, input[type='checkbox'], input[type=radio]
   padding: $margin-micro
-  
+
 // ******************************************************
 
 // HEADER
@@ -60,14 +60,14 @@ body.single-collection
 
 .single-collection-item
   padding: 0 30vw 0 10vw
-  
+
 .single-collection-text
   padding: $header-height 10vw
   margin-top: 0
-  display: flex 
+  display: flex
   flex-direction: column
   align-items: center
-  p 
+  p
     width: 400px
 
 // ******************************************************
@@ -82,7 +82,7 @@ body.single-collection
 // SINGLE PRODUCT
 
 .variations_form
-  .variations 
+  .variations
     td
       padding-bottom: $margin-small
   td.label
@@ -90,42 +90,44 @@ body.single-collection
 
 .amount
   margin-bottom: $margin-small
-  
+
 .quantity
   margin-bottom: $margin-small
 
+#product-gallery-container
+  height: calc('100vh - ' + ($header-height + $footer-height))
+
 .slider-next
-  svg 
+  svg
     height: 34px
-    
+
 // ******************************************************
 
 // CART
 
 .cart-remove-item
   left: $margin-tiny
-  
+
 .quantity
-  input 
+  input
     margin-top: -($margin-tiny)
-    
+
 .button-shop
   padding: $margin-micro
-  
+
 #coupon_code
   width: auto
-  
+
 .woocommerce-shipping-calculator
   text-align: right
-  
+
 // ******************************************************
 
-// CHECKOUT 
+// CHECKOUT
 
-.form-row 
+.form-row
   margin-bottom: $margin-small
   label
-    margin-bottom: $margin-micro 
+    margin-bottom: $margin-micro
   input, select, textarea
     font-size: $font-size-medium
-    
