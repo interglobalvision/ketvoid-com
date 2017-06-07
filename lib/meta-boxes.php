@@ -95,7 +95,7 @@ function igv_cmb_metaboxes() {
     'name' => __( 'Alternate URL', 'cmb2' ),
     'desc' => __( '', 'cmb2' ),
     'id'   => $prefix . 'collection_alt_url',
-    'type' => 'text',
+    'type' => 'text_url',
   ) );
 
   $collection_meta->add_field( array(
