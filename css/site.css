@@ -1227,6 +1227,18 @@ body {
 p {
   margin-bottom: 1rem;
 }
+ol,
+ul {
+  position: relative;
+}
+li::before {
+  content: '';
+  position: absolute;
+  width: 0.6em;
+  left: -1em;
+  height: 0.7em;
+  border-bottom: 1px solid #000;
+}
 .text-shadow {
   text-shadow: 0px 0px 7px rgba(255,255,255,0.6);
 }

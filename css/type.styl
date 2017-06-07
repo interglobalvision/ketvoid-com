@@ -3,7 +3,7 @@
 // declare font families here
 
 @import 'fonts'
-  
+
 $font-sans = 'HK Grotesk', font-stack('Helvetica');
 $font-serif = font-stack('Georgia');
 
@@ -43,21 +43,33 @@ html
 
 body
   line-height: $font-leading-basic
-  
+
 p
   margin-bottom: 1rem
-  
+
+ol, ul
+  position: relative
+
+li
+  &::before
+    content: ''
+    position: absolute
+    width: .6em
+    left: -1em
+    height: .7em
+    border-bottom: 1px solid $color-black
+
 .text-shadow
   text-shadow: 0px 0px 7px $color-white-trans
-  
+
 // FONT RULES
-  
+
 .font-sans
   font-family: $font-sans
-  
+
 .font-serif
   font-family: $font-serif
-  
+
 .font-larger
   font-size: $font-size-larger
 
@@ -66,10 +78,10 @@ p
 
 .font-bold
   font-weight: bold
-  
+
 .font-light
   font-weight: 300
-  
+
 .font-medium
   font-weight: 500
 
@@ -96,8 +108,8 @@ p
 
 .text-align-center
   text-align: center
-  
-// HEADER 
+
+// HEADER
 
 .site-title
   font-family: 'Placard', font-stack('Helvetica');
@@ -111,32 +123,32 @@ a:visited
   text-decoration: none
   &.text-underline
     text-decoration: underline
-  
+
 font-sizes($size-basic = 15px, $size-extra = false, $size-large = false, $size-medium = false, $size-small = false, $size-tiny = false, $size-micro = false)
 
   html, .font-size-basic
     font-size: $size-basic
-    
-  if ($size-extra) 
+
+  if ($size-extra)
     .font-size-extra
       font-size: $size-extra
-      
-  if ($size-large) 
+
+  if ($size-large)
     .font-size-large
       font-size: $size-large
-      
-  if ($size-medium) 
+
+  if ($size-medium)
     .font-size-medium
       font-size: $size-medium
-      
-  if ($size-small) 
+
+  if ($size-small)
     .font-size-small
       font-size: $size-small
-      
-  if ($size-tiny) 
+
+  if ($size-tiny)
     .font-size-tiny
       font-size: $size-tiny
-      
-  if ($size-micro) 
+
+  if ($size-micro)
     .font-size-micro
       font-size: $size-micro
