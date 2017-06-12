@@ -92,6 +92,13 @@ function igv_cmb_metaboxes() {
   ) );
 
   $collection_meta->add_field( array(
+    'name' => __( 'Alternate URL', 'cmb2' ),
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'collection_alt_url',
+    'type' => 'text_url',
+  ) );
+
+  $collection_meta->add_field( array(
     'name' => __( 'Background image', 'cmb2' ),
     'desc' => __( '', 'cmb2' ),
     'id'   => $prefix . 'collection_bg',
@@ -106,6 +113,13 @@ function igv_cmb_metaboxes() {
     'type' => 'pw_gallery',
     'preview_size' => array( 200, 200 ), // Set the size of the thumbnails
     'sanitization_cb' => 'pw_gallery_field_sanitise', // REQUIRED
+  ) );
+
+  $collection_meta->add_field( array(
+    'name' => __( 'Vimeo video ID', 'cmb2' ),
+    'desc' => __( 'string of numbers from Vimeo URL: https://vimeo.com/#########', 'cmb2' ),
+    'id'   => $prefix . 'collection_vimeo_id',
+    'type' => 'text',
   ) );
 
 }

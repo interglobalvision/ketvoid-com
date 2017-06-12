@@ -9,22 +9,31 @@ if( have_posts() ) {
 
     $images = get_post_meta($post->ID, '_igv_collection_imgs', true);
     $background = get_post_meta($post->ID, '_igv_collection_bg', true);
+    $vimeo_id = get_post_meta($post->ID, '_igv_collection_vimeo_id', true);
 ?>
-    <?php 
+    <?php
       if (!empty($background)) {
     ?>
     <div class="single-collection-background" style="background-image:url('<?php echo $background ?>')"></div>
     <?php
-      } 
+      }
     ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
       <div class="grid-row single-collection-row align-items-center">
 
-      <?php 
+      <?php
         if (!empty($images)) {
+          $video_index = ceil(count($images) / 2);
+          $i = 1;
+
           foreach ($images as $image) {
             echo wp_get_attachment_image( $image, 'gallery', false, array('class'=>'single-collection-item'));
+
+            if ($i == $video_index) {
+              echo '<div class="single-collection-item"><iframe src="https://player.vimeo.com/video/' . $vimeo_id . '?autoplay=1&loop=1" class="single-collection-video" frameborder="0"></iframe></div>';
+            }
+            $i++;
           }
         }
 
