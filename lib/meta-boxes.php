@@ -92,6 +92,13 @@ function igv_cmb_metaboxes() {
   ) );
 
   $collection_meta->add_field( array(
+    'name' => __( 'Alternate URL', 'cmb2' ),
+    'desc' => __( '', 'cmb2' ),
+    'id'   => $prefix . 'collection_alt_url',
+    'type' => 'text_url',
+  ) );
+
+  $collection_meta->add_field( array(
     'name' => __( 'Background image', 'cmb2' ),
     'desc' => __( '', 'cmb2' ),
     'id'   => $prefix . 'collection_bg',
