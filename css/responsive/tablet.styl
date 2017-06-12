@@ -16,7 +16,7 @@ $footer-height = 53px
 
 // FORMS
 
-input, select, button, .button, textarea, input[type="checkbox"], input[type=radio]
+input, select, button, .button, textarea, input[type='checkbox'], input[type=radio]
   padding: $margin-micro
 
 // ******************************************************
@@ -100,6 +100,9 @@ body.single-collection
 
 .quantity
   margin-bottom: $margin-small
+
+#product-gallery-container
+  height: calc('100vh - ' + ($header-height + $footer-height))
 
 .slider-next
   svg
