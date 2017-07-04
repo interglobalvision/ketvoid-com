@@ -48,7 +48,6 @@ if( have_posts() ) {
       ?>
 
       </div>
-      <div class="single-collection-title font-uppercase text-shadow"><h1 class="font-size-medium"><?php the_title(); ?></h1></div>
     </article>
 
 <?php
