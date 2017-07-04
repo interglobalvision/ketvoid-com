@@ -33,7 +33,7 @@ if( have_posts() ) {
   }
 } else {
 ?>
-          <article class="u-alert"><h1 class="font-size-large"><?php _e('No collections'); ?></h1></article>
+          <article class="u-alert"><h1 class="font-size-large font-bold"><?php _e('No collections'); ?></h1></article>
 <?php
 } ?>
         </div>

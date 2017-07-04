@@ -64,7 +64,7 @@ if( have_posts() ) {
           </div>
 
           <div class="grid-item item-s-12 item-m-3 offset-m-1 item-l-3 offset-l-2">
-            <h1 class="margin-bottom-small font-uppercase font-size-medium"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+            <h1 class="margin-bottom-small font-uppercase font-size-medium font-bold"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
             <?php the_content(); ?>
             <?php echo $product->get_price_html(); ?>
             <?php do_action( 'woocommerce_' . $product->product_type . '_add_to_cart' ); ?>
