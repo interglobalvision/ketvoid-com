@@ -23,7 +23,7 @@ if( have_posts() ) {
 ?>
           <article <?php post_class('archive-collection-item'); ?> id="post-<?php the_ID(); ?>">
             <h2 class="font-size-large text-shadow">
-              <a href="<?php echo $link; ?>" class="archive-collection-link"><?php the_title(); ?></a>
+              <a href="<?php echo $link; ?>" class="archive-collection-link font-bold"><?php the_title(); ?></a>
             </h2>
             <div class="archive-collection-image-holder grid-row">
               <?php the_post_thumbnail('item-l-3-4x3'); ?>
