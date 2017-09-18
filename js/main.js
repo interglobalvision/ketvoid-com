@@ -213,7 +213,9 @@ Site.Layout = {
   },
 
   convertScroll: function() {
-    if ($('body').css('overflow-x') == 'scroll' && this.windowWidth >= 720) {
+    var _this = this;
+
+    if ($('body').css('overflow-x') == 'scroll' && _this.windowWidth >= 720) {
       scrollConverter.activate();
     } else {
       scrollConverter.deactivate();
@@ -221,8 +223,10 @@ Site.Layout = {
   },
 
   setBodyWidth: function() {
+    var _this = this;
+    
     // explicit body width is necessary for scrollConverter to work on Mozilla
-    if ($('body').css('overflow-x') == 'scroll' && this.windowWidth >= 720) {
+    if ($('body').css('overflow-x') == 'scroll' && _this.windowWidth >= 720) {
       var bodyWidth = 0;
 
       $('.single-collection-item, .single-collection-text').each(function() {
