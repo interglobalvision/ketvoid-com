@@ -23,7 +23,7 @@ Site = {
       if ($('body').hasClass('single-product')) {
         _this.Product.Single.init();
       }
-      
+
     });
 
   },
@@ -62,7 +62,7 @@ Site.Collection = {
     init: function() {
       _this = this;
 
-      _this.bindItemHover();  
+      _this.bindItemHover();
     },
 
     bindItemHover: function() {
@@ -119,7 +119,7 @@ Site.Home = {
 
       $('.home-image-left, .home-image-right').css({
         'height': Site.Layout.windowHeight - videoTop,
-        'width': videoLeft, 
+        'width': videoLeft,
       });
     }
   },
@@ -150,7 +150,7 @@ Site.Home = {
     }
     */
 
-    $(document).bind('mousemove', function(e){ 
+    $(document).bind('mousemove', function(e){
         var mouseX = ( e.pageX / Site.Layout.windowWidth ) * 100,
           mouseY = ( e.pageY / Site.Layout.windowHeight ) * 100;
 
@@ -196,14 +196,15 @@ Site.Product = {
 };
 
 Site.Layout = {
-  windowWidth: $(window).width(),
-  windowHeight: $(window).height(),
   init: function() {
     var _this = this;
 
+    _this.windowWidth = $(window).width();
+    _this.windowHeight = $(window).height();
+
     if ($('body').hasClass('single-collection')) {
       _this.convertScroll();
-      
+
       $('img.single-collection-item').one('load',function() {
         // set body width as each image loads
         _this.setBodyWidth();
@@ -212,7 +213,7 @@ Site.Layout = {
   },
 
   convertScroll: function() {
-    if ($('body').css('overflow-x') == 'scroll') {
+    if ($('body').css('overflow-x') == 'scroll' && this.windowWidth >= 720) {
       scrollConverter.activate();
     } else {
       scrollConverter.deactivate();
@@ -221,7 +222,7 @@ Site.Layout = {
 
   setBodyWidth: function() {
     // explicit body width is necessary for scrollConverter to work on Mozilla
-    if ($('body').css('overflow-x') == 'scroll') {
+    if ($('body').css('overflow-x') == 'scroll' && this.windowWidth >= 720) {
       var bodyWidth = 0;
 
       $('.single-collection-item, .single-collection-text').each(function() {

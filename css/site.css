@@ -2034,6 +2034,7 @@ body.single-collection {
   margin: 0;
 }
 .single-collection-row {
+  display: block;
   -ms-justify-content: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2406,6 +2407,9 @@ body.single-collection {
     overflow-x: scroll;
   }
   .single-collection-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
