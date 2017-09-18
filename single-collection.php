@@ -28,7 +28,7 @@ if( have_posts() ) {
           $i = 1;
 
           foreach ($images as $image) {
-            echo wp_get_attachment_image( $image, 'gallery', false, array('class'=>'single-collection-item', 'data-no-lazysizes'=>''));
+            echo wp_get_attachment_image( $image, 'gallery', false, array('class'=>'single-collection-item'));
 
             if ($i == $video_index && !empty($vimeo_id)) {
               echo '<div class="single-collection-item"><iframe src="https://player.vimeo.com/video/' . $vimeo_id . '?autoplay=1&loop=1" class="single-collection-video" frameborder="0"></iframe></div>';
