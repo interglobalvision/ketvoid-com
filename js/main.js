@@ -224,7 +224,7 @@ Site.Layout = {
 
   setBodyWidth: function() {
     var _this = this;
-    
+
     // explicit body width is necessary for scrollConverter to work on Mozilla
     if ($('body').css('overflow-x') == 'scroll' && _this.windowWidth >= 720) {
       var bodyWidth = 0;
