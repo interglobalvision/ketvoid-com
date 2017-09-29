@@ -20,7 +20,7 @@ if( have_posts() ) {
     ?>
 
     <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-      <div class="grid-row single-collection-row align-items-center">
+      <div class="single-collection-row align-items-center">
 
       <?php
         if (!empty($images)) {
@@ -31,7 +31,7 @@ if( have_posts() ) {
             echo wp_get_attachment_image( $image, 'gallery', false, array('class'=>'single-collection-item'));
 
             if ($i == $video_index && !empty($vimeo_id)) {
-              echo '<div class="single-collection-item"><iframe src="https://player.vimeo.com/video/' . $vimeo_id . '?autoplay=1&loop=1" class="single-collection-video" frameborder="0"></iframe></div>';
+              echo '<div class="single-collection-item grid-row align-items-center"><iframe src="https://player.vimeo.com/video/' . $vimeo_id . '?autoplay=1&loop=1" class="single-collection-video" frameborder="0"></iframe></div>';
             }
             $i++;
           }
